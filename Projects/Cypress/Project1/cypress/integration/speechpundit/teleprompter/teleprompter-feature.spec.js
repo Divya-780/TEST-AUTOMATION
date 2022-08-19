@@ -3,7 +3,7 @@ describe('User(student) shall be able to use the teleprompter feature', function
     it('User(student) shall be able to use the teleprompter feature.', function () {
         let url = Cypress.config().baseUrl; //accesing baseUrl
         cy.visit(url);
-        cy.contains('Sign in').click();         
+        cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+18@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
@@ -20,13 +20,13 @@ describe('User(student) shall be able to use the teleprompter feature', function
         cy.wait(1000)
         cy.get('.p-dropdown').eq(2).click()
         //preview and save the settings.
+        cy.wait(2000)
         // cy.get('[ptooltip="Preview"]').click()
-        // cy.wait(1000)
         //update setting
-        cy.get('[ptooltip="Update Settings"]').eq(1).click()
-        cy.wait(1000)
+        cy.wait(2000)
         cy.get('[ptooltip="Update Settings"]').click()
         //click record
+        cy.wait(2000)
         cy.get('[ptooltip="Start Record"]').dblclick()
         cy.contains('Record').click()
         //VALIDATION

@@ -11,7 +11,7 @@ describe('Toggle of animation icon on video', function () {
         cy.contains('Activity').click();
         cy.wait(1000);
        //Click on summary icon for a speech displayed in Activity page
-        cy.get('.pt-3 > .btn').eq(2).click();
+        cy.get('.pt-3 > .btn').first().click();
         //Click on play icon --> verify that video playback has started
         cy.get('.p-button-rounded').click();
         cy.wait(500);
