@@ -1,0 +1,18 @@
+{
+    "video": false,
+    "numTestsKeptInMemory": 0,
+    "baseUrl": "https://dev02.speechpundit.com",
+    "prodUrl":"https://speechpundit.com",
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "charts": true,
+        "reportPageTitle": "speechpundit Test-cases -Report",
+        "embeddedScreenshots":true,
+        "html":true,
+        "json":false
+      }
+      
+     
+    
+}
