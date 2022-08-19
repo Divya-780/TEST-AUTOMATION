@@ -11,7 +11,7 @@ describe('User is taken to subscription page', function () {
         cy.get('form').submit();
         cy.contains('Basic Plan');
         cy.contains('Get Started').click();
-        cy.contains('Purchase').click();
+        cy.contains('Purchase')
         //-- VALIDATION --//
         
  
