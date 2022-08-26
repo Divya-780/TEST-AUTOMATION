@@ -23,7 +23,9 @@ describe('Testing Landing Page', () => {
         cy.go('back');
         cy.get('[routerlink="/contact_us"]').click();
         cy.contains('Plans');
-        cy.contains('Privacy Policy');
+        cy.contains('Privacy Policy').click();
+        cy.contains('Instagram').click();
+        cy.wait(3000);
         cy.go('back');
     })
   })
