@@ -14,7 +14,7 @@ describe('Delete the impromptu topic', function () {
         cy.get('[routerlink="user/lessonplan"]').click({force: true});
 
         //Impromptu section
-        cy.contains('Impromptu Topic')
+        cy.get('#p-tabpanel-1-label').click()
         cy.wait(4000)
         //click the delete icon for the speech need to be deleted.
         cy.get('.fa-trash').last().click()

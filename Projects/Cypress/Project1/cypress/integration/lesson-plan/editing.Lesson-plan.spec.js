@@ -13,7 +13,7 @@ describe('Editing the lesson plan ', function () {
         cy.get('.nav-item').invoke('show')
         cy.get('[routerlink="user/lessonplan"]').click({force: true});
         //Click on the edit icon to make any changes.
-        cy.wait(2000)
+        cy.get('#p-tabpanel-0-label').click()
         cy.get('.fa-edit').first().click({force:true});  
         cy.get('#speechTitle').clear().type('Traveling');
         cy.get('.form-select').select('Beginner').should('have.value','Beginner');

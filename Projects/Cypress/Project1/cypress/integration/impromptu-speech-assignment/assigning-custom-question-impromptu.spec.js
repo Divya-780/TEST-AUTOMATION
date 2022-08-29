@@ -12,8 +12,8 @@ describe('custom question for impromptu', function () {
       // visit lesson plan.
       cy.get('.nav-item').invoke('show')
       cy.get('[routerlink="user/lessonplan"]').click({force: true});
-      cy.wait(4000)
-      cy.contains('Impromptu Topic')
+      cy.get('#p-tabpanel-1-label').click()
+     // cy.contains('Impromptu Topic')
       cy.get('.btn').eq(1).click()
       //add the custom question.
       cy.get('#p-accordiontab-0').click()

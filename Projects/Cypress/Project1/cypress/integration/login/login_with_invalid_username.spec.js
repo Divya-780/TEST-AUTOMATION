@@ -9,6 +9,8 @@ describe('User shall NOT be able to login by providing invalid username', functi
         cy.get('#password').type('Sathwik@119');
         cy.get('form').submit();
         //-- VALIDATION --//
+        // For invalid email(without .com), the submit button should be disabled
+        cy.get('.btn').should('be.disabled')
 
     })
     })

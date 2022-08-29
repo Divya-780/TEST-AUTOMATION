@@ -8,8 +8,10 @@ describe('Warning message shall be displayed when invalid characters are provide
         cy.get('#email').type('****sowbhagya3696+@gmail.com');
         cy.get('#password').type('Sathwik@119');
         cy.get('form').submit();
-        cy.contains('Invalid Credential');
-        //-- VALIDATION --//
+
+        //-- VALIDATION - The error code should be displayed
+        cy.contains('Invalid Credentials');
+
 
     })
     })

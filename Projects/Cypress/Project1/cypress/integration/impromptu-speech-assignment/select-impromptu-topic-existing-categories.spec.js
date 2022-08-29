@@ -12,7 +12,7 @@ describe('selecting the impromptu topic from existing categories', function () {
         // visit lesson plan.
         cy.get('.nav-item').invoke('show')
         cy.get('[routerlink="user/lessonplan"]').click({force: true});
-        cy.contains('Impromptu Topic')
+        cy.get('#p-tabpanel-1-label').click()
         cy.get('.btn').eq(1).click()
         //Assigning the Impromptu speech topics
         cy.get('#p-accordiontab-1').click()

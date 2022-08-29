@@ -12,6 +12,7 @@ describe(' Deleting the lesson plan', function () {
         cy.get('.nav-item').invoke('show');
         cy.get('[routerlink="user/lessonplan"]').click({force: true});
         //Click on the delete icon to delete the lesson plan.
+        cy.get('#p-tabpanel-0-label').click()
         cy.get('.fa-trash').last().click();  
         cy.get('.p-confirm-popup-accept').first().click( {force: true});
         //

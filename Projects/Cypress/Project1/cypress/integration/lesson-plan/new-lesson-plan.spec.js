@@ -12,7 +12,7 @@ describe(' Coach shall be able to add a new lesson plan', function () {
     cy.wait(1000)
     cy.get('.nav-item').invoke('show')
     cy.get('[routerlink="user/lessonplan"]').click({force: true});
-    cy.wait(3000)
+    cy.get('#p-tabpanel-0-label').click()
     cy.get('.btn').first().click();
     //Enter Speech Title, Speech Level and Speech time (duration).
     cy.get('#speechTitle').type('About childhood');

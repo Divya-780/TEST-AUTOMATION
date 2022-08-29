@@ -6,11 +6,12 @@ describe('sign up form cannot be submitted with invalid characters', function ()
     cy.get('#email').type('sowbhagya3696+604@gmail.com');
     cy.get('#firstName').type('sowbhagya');
     cy.get('#lastName').type('lakshmi');
-    cy.get('#password').type('Sathwik1719');//invalid password.
+    //Entering password without special character
+    cy.get('#password').type('Sathwik1719');
     cy.get('[Value="Coach"]').check({force: true});
     cy.get('#acceptTerms');
     cy.get('form').submit();
     //PSWD VALIDATION
-    cy.contains('Must contain at least one special character');
+    cy.contains('Must contain at least one special character').should('exist');
  })
 })

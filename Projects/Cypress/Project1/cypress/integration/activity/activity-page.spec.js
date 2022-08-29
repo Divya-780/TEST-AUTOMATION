@@ -7,7 +7,9 @@ describe('Display of newly recorded speech in activity page', function () {
         cy.get('#email').type('sowbhagya3696+105@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
-        cy.contains('Activity').click();
+        //Validation - After sign in, It should redirect to the activity page
+        cy.url().should("contain", '/activity/history');
+
         //VALIDATION-verifying Newly recorded speeches in Activity page.
         cy.contains('Visual');
         cy.contains('Voice');

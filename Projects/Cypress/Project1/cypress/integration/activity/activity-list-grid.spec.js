@@ -6,12 +6,14 @@ describe('Display of speeches in either grid or list view in activity page', fun
         cy.get('#email').type('sowbhagya3696+4@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
-        cy.contains('Activity').click();
+        //Validation - After sign in, It should redirect to the activity page
+        cy.url().should("contain", '/activity/history');
+
         //LIST VIEW
         cy.get('[for="btnradio1"]').click();
         //GRID VIEW
         cy.get('[for="btnradio2"]').click();
         //-- VALIDATION --// 
-        cy.url().should("contain", 'studentactivity');
+        cy.url().should("contain", '/activity/history');
     })
 })

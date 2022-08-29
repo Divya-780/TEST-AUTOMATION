@@ -1,10 +1,10 @@
-//User shall NOT be able to sign up if not accepting terms and conditions
 describe('User shall NOT be able to sign up if not accepting terms and conditions', function () {
     it('User shall NOT be able to sign up if not accepting terms and conditions ', 
     function () {
     //-- ACTION --//   
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl; //accessing baseUrl
     cy.visit(url);
+    //Redirecting to signup page
     cy.contains('Sign Up').click();    
     var date = new Date();
     var fname = "autouser";
@@ -16,9 +16,10 @@ describe('User shall NOT be able to sign up if not accepting terms and condition
     cy.get('#lastName').type(yyyymmdd.concat(hhmmss));
     cy.get('#password').type('Sathwik@1719');
     cy.get('[Value="Coach"]').check({force: true});//sign up as Coach.
+    //Accept terms check box is not selected 
     cy.get('#acceptTerms')
     cy.get('form').submit();
     //-- VALIDATION --//
-    cy.contains('Please accept the Terms & Conditions to register')
+    cy.contains('Please accept the Terms & Conditions to register').should('exist');
     })   
 })

@@ -6,8 +6,10 @@ describe('All speeches of user shall be displayed in activity page', function ()
         cy.get('#email').type('divya+2022coach@applines.com');
         cy.get('#password').type('Sonu@1234');
         cy.get('form').submit();
-        //Record a speech and navigate to Activity page.
-        cy.contains('Activity')
+
+        //Validation - After sign in, It should redirect to the activity page
+        cy.url().should("contain", '/activity/history');
+
         //VALIDATION
         cy.url().should("contain", 'history');
         cy.get('.dropdown').its('length').should('eq',5);

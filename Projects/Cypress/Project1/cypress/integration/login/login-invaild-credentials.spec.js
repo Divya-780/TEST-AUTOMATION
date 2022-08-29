@@ -10,6 +10,7 @@ it('login fails with invalid password',function (){
     cy.get('#password').type('Sathwik@119');
     cy.get('form').submit();
     //-- VALIDATION --//
-    cy.contains('Invalid Credential');
+    // For the invalid password, it should show error code
+    cy.contains('Invalid Credentials');
 })
 })

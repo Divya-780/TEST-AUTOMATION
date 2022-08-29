@@ -13,7 +13,7 @@ describe('Error if missing any required fields. ', function () {
     //visit Lesson Plan 
     cy.get('.nav-item').invoke('show');
     cy.get('[routerlink="user/lessonplan"]').click({force: true});
-    cy.wait(4000)
+    cy.get('#p-tabpanel-0-label').click()
     //Click " Add New" to add a new lesson plan.
     cy.get('.btn').first().click();
     // Enter Speech Title, Speech Level and Speech time (duration).

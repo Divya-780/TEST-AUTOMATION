@@ -10,7 +10,7 @@ describe('Testing login with valid credentials', function () {
     cy.get('#password').type('Sathwik@1719');
     cy.get('form').submit();
     //VALIDATION-logged in with valid credentials
-    cy.url().should("contain", 'history');
+    cy.url().should("contain", '/activity/history');
     cy.contains('Speeches');
     cy.contains('Activity');
     cy.contains('Record');

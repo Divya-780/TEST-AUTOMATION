@@ -7,13 +7,19 @@ describe('existing user shall be able to reset password', function () {
         cy.get('#email').type('sowbhagya3696+29@gmail.com');
         cy.get('form').submit();
         cy.wait(1000)
+
+        // VALIDATION - The mail will be send to the entered emial.
+        cy.contains('Please check your email for password reset instructions.')
+
         let url = Cypress.config().baseUrl; //accesing baseUrl
         cy.visit(url);
-        cy.contains('Sign in').click();       
+        cy.contains('Sign in').click();  
+        //Sign in with new password
         cy.get('#email').type('sowbhagya3696+29@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
-        //After change password.Again sign in.
+
+     
 
     })
 })

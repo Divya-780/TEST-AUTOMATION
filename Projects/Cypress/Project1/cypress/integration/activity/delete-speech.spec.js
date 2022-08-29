@@ -4,14 +4,21 @@ describe('Download a speech from activity page', function () {
         let url = Cypress.config().baseUrl; //accesing baseUrl
         cy.visit(url);
         cy.contains('Sign in').click();
-        cy.get('#email').type('applinetester+1@gmail.com');
+        cy.get('#email').type('sowbhagya3696+4@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
+        //Validation - After sign in, It shuld redirect to the activity page
+        cy.url().should("contain", '/activity/history');
         cy.wait(4000)
-        cy.get('#dropdownOne').click();
-        cy.contains('Delete').click();
-        cy.get('.p-dialog-footer > .btn').click();
-        cy.wait(4000)
+        // By clicking on more option, we should select delete button
+        cy.get('.fe-more-vertical').eq(0).click();
+        cy.get('.fa-trash-alt').eq(0).click();
+        // Validation - Deletion prompt should be displayed
+        cy.contains('Delete Video')
+        // Click on the delete button in the prompt
+        cy.get('.p-dialog-footer > .btn').click()
+        // cy.get('.p-dialog-footer').click()
+
         //-- VALIDATION --//
         //Note that the deleted video is not on the Students Activity page
     })

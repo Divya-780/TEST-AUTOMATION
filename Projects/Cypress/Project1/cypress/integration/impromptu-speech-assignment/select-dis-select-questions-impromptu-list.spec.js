@@ -12,7 +12,7 @@ describe('selecting and dis-selecting the questions from the list', function () 
         // visit lesson plan.
         cy.get('.nav-item').invoke('show')
         cy.get('[routerlink="user/lessonplan"]').click({force: true});
-        cy.contains('Impromptu Topic')
+        cy.get('#p-tabpanel-1-label').click()
         cy.wait(4000)
         //select or dis-select the questions by the toggle on/off option
         cy.get('.col-sm-3').eq(1).click()
