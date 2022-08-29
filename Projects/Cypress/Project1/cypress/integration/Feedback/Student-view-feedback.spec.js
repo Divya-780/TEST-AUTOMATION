@@ -17,7 +17,7 @@ describe('Student shall be able to see  a feedback given by coach', function () 
         cy.wait(5000);
         cy.get('.btn-secondary').click();
         //--VALIDATION--//
-        //Obeserve that the coach given feedback is displaying on video  while video is playing
+        //Observe that the coach given feedback is displaying on video  while video is playing
         
     })
 })
