@@ -1,5 +1,5 @@
 //Coach shall be able to provide a feedback.
-describe('Student shall be able to see  a feedback gicen by coach', function () {
+describe('Student shall be able to see  a feedback given by coach', function () {
     it('Student shall be able to see feedback in summary page', function () {
         //Record a speech and navigate to Activity page.
         let url = Cypress.config().baseUrl; //accesing baseUrl

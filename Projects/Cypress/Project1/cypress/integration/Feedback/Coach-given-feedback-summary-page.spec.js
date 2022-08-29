@@ -10,7 +10,7 @@ describe("Coach shall be able to see  a feedback.", function () {
     cy.get("form").submit();
     cy.contains("Student Activity").click();
     cy.wait(2000);
-
+    
     //SELECTING VIDEO FOR FEEDBACK
     cy.get(".p-shadow-4").eq(4).click();
 
@@ -26,6 +26,6 @@ describe("Coach shall be able to see  a feedback.", function () {
     cy.contains("Play/Pause").click();
     cy.wait(3000);
     //--VALIDATION--//
-    //Obeserve that the coach given feedback is displaying on video  while video is playing
+    //Observe that the coach given feedback is displaying on video  while video is playing
   });
 });
