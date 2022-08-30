@@ -2,7 +2,7 @@
 describe("user shall be able to sign out", function () {
   it(" Verify that user shall be able to sign out and redirected to landing page", function () {
     //login as a valid user.
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get("#email").type("sowbhagya3696+4@gmail.com");

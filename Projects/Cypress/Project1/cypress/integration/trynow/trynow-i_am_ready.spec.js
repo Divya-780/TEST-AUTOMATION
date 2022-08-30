@@ -1,7 +1,7 @@
 describe('Try Now -I am Ready ', function () {
     it('Any user shall be able to record an impromptu speech after clicking "Try Now" button. It will direct the user to the impromptu speech categories to pick the speech topic and it will open record speech by clicking Im ready Button  from.',function(){
         //Access the website
-        let url = Cypress.config().baseUrl; //accessing baseUrl
+        let url = Cypress.config().baseUrl;    
         cy.visit(url);
         cy.contains('Try Now').click();
         //user shall be presented with the 7 categories to pick a topic and question related to that.

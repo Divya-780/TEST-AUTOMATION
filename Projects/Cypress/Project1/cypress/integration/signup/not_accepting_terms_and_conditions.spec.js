@@ -2,7 +2,7 @@ describe('User shall NOT be able to sign up if not accepting terms and condition
     it('User shall NOT be able to sign up if not accepting terms and conditions ', 
     function () {
     //-- ACTION --//   
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     //Redirecting to signup page
     cy.contains('Sign Up').click();    

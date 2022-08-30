@@ -1,7 +1,7 @@
 describe('sign up form cannot be submitted without entering values for required fields', function () {
     it('Verify that user shall NOT be able to submit sign up form without entering values for required fields', function () {
     //Sign up with empty fields
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     cy.contains('Sign Up').click();    
     cy.get('#email').type('sowbhagya3696+11046@gmail.com');

@@ -2,7 +2,7 @@ describe("Testing Landing Page", () => {
   it("Verifies that the page loads with the expected content", () => {
     //Verifying content on speechpundit website//
     cy.wait(2000);
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     // Verify that header elements are present
     cy.contains("About Us");

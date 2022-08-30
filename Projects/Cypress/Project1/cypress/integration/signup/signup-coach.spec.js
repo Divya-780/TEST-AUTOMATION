@@ -3,7 +3,7 @@ describe('user shall be able to sign up as Coach', function () {
     it(' Verify that user shall be able to sign up as Coach by providing acceptable values for all required fields.', 
     function () {
     //-- ACTION --//   
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     cy.contains('Sign Up').click();    
     var date = new Date();

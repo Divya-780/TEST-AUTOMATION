@@ -1,7 +1,7 @@
 describe("Record a video", function () {
   it("User shall be able to record a video.", function () {
     //Login with valid credentials.
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get('#email').type('sowbhagya3696+105@gmail.com');

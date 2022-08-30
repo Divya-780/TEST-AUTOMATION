@@ -3,7 +3,7 @@ describe('User shall NOT be able to sign up if not selecting any role.', functio
     it('User shall NOT be able to sign up if not selecting any role.', 
     function () {
     //-- ACTION --//   
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     cy.contains('Sign Up').click();    
     var date = new Date();

@@ -1,7 +1,7 @@
 describe("Help Center Page", function () {
   it("Verify that user shall be able to click all the links in help center page", function () {
     //Contact us form
-    let url = Cypress.config().baseUrl; //accessing baseUrl
+    let url = Cypress.config().baseUrl;    
     cy.visit(url);
     cy.contains("Help Center").click();
     //Verifying user shall be able to visit help center page
