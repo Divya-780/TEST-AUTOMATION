@@ -2,7 +2,7 @@
 describe('Coach shall be able to pick certain number of days for target practice', function () {
     it('Coach shall be able to pick certain number of days for target practice', function () {
         //sigin as coach.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+202@gmail.com');

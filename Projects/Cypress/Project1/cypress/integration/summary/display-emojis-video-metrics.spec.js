@@ -1,7 +1,7 @@
 //Display of emojis, laughter, sad etc according to speech content in video metrics
 describe('Display of emojis, laughter, sad etc according to speech content in video metrics', function () {
     it('Verify that emojis of laughter, sad etc are displayed according to speech content in video metrics', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

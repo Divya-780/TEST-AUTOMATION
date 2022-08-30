@@ -3,7 +3,7 @@ describe('After a successful payment, user shall be directed to Speechpundit', f
     it('After the successful payment, user shall be directed to Speechpundit website and start recording. ', 
     function () {
         // Login with valid credentials
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();           
         cy.get('#email').type('applinetester+2@gmail.com');

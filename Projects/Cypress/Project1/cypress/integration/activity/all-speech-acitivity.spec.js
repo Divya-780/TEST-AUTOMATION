@@ -1,6 +1,6 @@
 describe('All speeches of user shall be displayed in activity page', function () {
     it(' Verify all speeches of user are displayed in activity page', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('divya+2022coach@applines.com');

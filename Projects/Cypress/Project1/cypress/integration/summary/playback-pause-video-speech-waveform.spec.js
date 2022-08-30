@@ -1,7 +1,7 @@
 //Playback, pause of video using play icon in speech waveform
 describe('Playback, pause of video using play icon in speech waveform', function () {
     it('Verify that Playback, pause of video is possible using play icon in speech waveform', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

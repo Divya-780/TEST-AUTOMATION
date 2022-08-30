@@ -2,7 +2,7 @@
 describe('Coach shall be able to see all assignment details under All assignments page in Classwork',function(){
     it('Coach shall be able to see all assignment details under All assignments page in Classwork',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

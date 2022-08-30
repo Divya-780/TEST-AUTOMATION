@@ -1,7 +1,7 @@
 //User shall be able to see their subscription plan
 describe("User shall be able to see the detail of their subscription plan along with any upgrade or downgrade if applied.", function() {
     it('User shall be able to upgrade or downgrade the subscription plan by clicking "Change plan" on My Subscription page. User shall be presented with the options and pro-rated amount.', function() {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains("Sign in").click(); //Login with valid credentials
         cy.get("#email").type("sowbhagya3696+4@gmail.com");

@@ -1,7 +1,7 @@
 //Display of words and their frequency in Filler Words
 describe(' Display of words and their frequency in Filler Words', function () {
   it('Verify that filler words detected in speech are displayed along with their frequency in Verbal Metrics', function () {
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();
     cy.get('#email').type('sowbhagya3696+25@gmail.com');

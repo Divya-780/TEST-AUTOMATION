@@ -11,7 +11,7 @@ describe('existing user shall be able to reset password', function () {
         // VALIDATION - The mail will be send to the entered emial.
         cy.contains('Please check your email for password reset instructions.')
 
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();  
         //Sign in with new password

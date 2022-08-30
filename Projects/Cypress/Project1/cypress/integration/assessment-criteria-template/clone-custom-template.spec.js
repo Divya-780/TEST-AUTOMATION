@@ -2,7 +2,7 @@
 describe('Clone custom template',function(){
     it('Coach should be able to clone template from the default template',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

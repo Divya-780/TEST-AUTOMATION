@@ -2,7 +2,7 @@
 describe('new students access to Impromptu questions', function () {
     it('students access to access Impromptu questions.', function () {
       // visit signin url.
-      let url = Cypress.config().baseUrl; //accesing baseUrl
+      let url = Cypress.config().baseUrl;   
       cy.visit(url);
       cy.contains('Sign in').click();      
       cy.get('#email').type('challa.sowji+21@gmail.com');

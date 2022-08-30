@@ -2,7 +2,7 @@
 describe('Add group details',function(){
     it('Coach shall be able to create the group by adding all the required details such as group name, level, class time and duration and class recurrence.',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

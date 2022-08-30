@@ -2,7 +2,7 @@
 describe('Upgrade and downgrade a plan', function () {
     it('User shall be able to upgrade or downgrade the subscription plan by clicking "Change plan" on My Subscription page. User shall be presented with the options and pro-rated amount.', function () {
         //Login with valid credentials
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('divya@applines.com');

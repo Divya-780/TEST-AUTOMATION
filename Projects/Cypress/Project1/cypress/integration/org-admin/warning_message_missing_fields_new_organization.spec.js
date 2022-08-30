@@ -2,7 +2,7 @@
 describe('Super admin shall get an warning if any information is missing while creating a new organization', function () {
     it('Super admin shall get an warning if any information is missing while creating a new organization ', function () {
     //login as a  super admin.  
-     let url = Cypress.config().baseUrl; //accesing baseUrl
+     let url = Cypress.config().baseUrl;   
      cy.visit(url);
      cy.contains('Sign in').click();   
      cy.get('#email').type('sowbhagya3696+4@gmail.com');

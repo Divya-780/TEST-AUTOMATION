@@ -2,7 +2,7 @@
 describe('Analytics page access', function () {
     it(' User shall be able to access the analytics page to see the different charts and metrics.', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

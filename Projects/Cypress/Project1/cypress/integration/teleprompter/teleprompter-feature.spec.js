@@ -1,7 +1,7 @@
 //User(student) shall be able to use the teleprompter feature
 describe('User(student) shall be able to use the teleprompter feature', function () {
     it('User(student) shall be able to use the teleprompter feature.', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

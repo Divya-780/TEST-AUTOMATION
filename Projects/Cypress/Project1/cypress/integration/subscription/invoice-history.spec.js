@@ -2,7 +2,7 @@
 describe("User will receive the receipt for a successful payment. ", function() {
     it("User can check the receipt after the successful transaction ", function() {
         // Login with valid credentials
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains("Sign in").click(); //Login with valid credentials
         cy.get("#email").type("applinetester+1@gmail.com");

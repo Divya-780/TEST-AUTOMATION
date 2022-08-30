@@ -1,7 +1,7 @@
 //Display of details for each of the multiple aspects of voice metrics
 describe('Display of details for each of the multiple aspects of voice metrics', function () {
     it('Verify that user can navigate to details for each of the multiple aspects of voice metrics', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+25@gmail.com');

@@ -2,7 +2,7 @@
 describe('As a super admin, I shall be able to create a new org.', function () {
     it(' sign in with valid credentials', function () {
     //login as a  super admin.  
-     let url = Cypress.config().baseUrl; //accesing baseUrl
+     let url = Cypress.config().baseUrl;   
      cy.visit(url);
      cy.contains('Sign in').click();   
      cy.get('#email').type('sowbhagya3696+4@gmail.com');

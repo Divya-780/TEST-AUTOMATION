@@ -1,7 +1,7 @@
 describe("sign up fails with previously used email ID", function () {
   it("Verify that sign up fails with previously used email ID when submitted along with valid values for all mandatory fields", function () {
     //Sign up with existing email
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains("Sign Up").click();
     //Previously used email id.

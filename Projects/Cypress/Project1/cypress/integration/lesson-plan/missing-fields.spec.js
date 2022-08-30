@@ -3,7 +3,7 @@
 describe('Error if missing any required fields. ', function () {
   it('Coach shall get an error message while saving if all required fields are not filled.', function () {
     //visit signin url
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+202@gmail.com');

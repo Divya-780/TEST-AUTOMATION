@@ -3,7 +3,7 @@ describe('Students list', function () {
     it(' An org admin shall be able to view list of all students and associated coaches in the org.', function () {
         cy.wait(2000)
         //login with org admin credentials
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();           
         cy.get('#email').type('sowbhagya3696+4org@gmail.com');

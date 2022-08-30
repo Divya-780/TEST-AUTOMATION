@@ -2,7 +2,7 @@
 describe('Deleting Custom Template',function(){
     it('A coach shall be able to delete the custom template only if its not assigned to any student',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

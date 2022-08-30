@@ -2,7 +2,7 @@
 describe('Warning message shall be displayed when invalid characters are provided for password', function () {
     it('login fails with invalid password',function (){
         //Sign in with invalid credentials
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();    
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

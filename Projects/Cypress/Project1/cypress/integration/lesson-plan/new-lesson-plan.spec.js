@@ -3,7 +3,7 @@
 describe(' Coach shall be able to add a new lesson plan', function () {
   it('Coach shall be able to add a new lesson plan.', function () {
     // visit signin Url
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

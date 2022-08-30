@@ -2,7 +2,7 @@
 describe('Bar chart time frame - Last month.', function () {
     it('User shall be able to view the bar chart of all the speeches and metrics done for the selected time frame -Last month. ', function () {
     //login as a valid user.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();
     cy.get('#email').type('sowbhagya3696+18@gmail.com');

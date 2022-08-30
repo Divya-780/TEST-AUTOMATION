@@ -1,7 +1,7 @@
 //Update of text, emoji in video metrics while video is played
 describe('Update of text, emoji in video metrics while video is played', function () {
     it('Verify that text, emoji are updated in video metrics while video is played', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

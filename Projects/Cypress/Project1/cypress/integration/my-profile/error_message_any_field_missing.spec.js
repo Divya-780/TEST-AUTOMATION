@@ -2,7 +2,7 @@
 describe('User shall get an error message if any field is missing the required information.', function () {
     it('User shall get an error message if any field is missing the required information.', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();   
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

@@ -1,6 +1,6 @@
 describe('user shall be able to sign up as Student', function () {
   it('email to be sent to user to confirm account sign up', function () {
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign Up').click();    
     var date = new Date();

@@ -2,7 +2,7 @@
 describe('coach shall be able to see all the performance analysis for all the students in the group.',function(){
     it('coach shall be able to see all the performance analysis for all the students in the group.',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

@@ -2,7 +2,7 @@
 //New user shall be able to choose the plan
 describe("New user is taken to subscription page", function() {
     it("After providing correct login credentials, user shall be directed to the subscription page and shall be able to choose the monthly/quarterly subscription plan.", function() {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains("Sign in").click(); //Login with valid credentials
         cy.get("#email").type("sowbhagya3696+4000@gmail.com");

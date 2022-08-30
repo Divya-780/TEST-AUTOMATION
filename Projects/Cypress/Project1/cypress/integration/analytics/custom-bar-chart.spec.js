@@ -2,7 +2,7 @@
 describe('User shall be able to view the bar chart of all the speeches and metrics done for the selected time frame - Custom range', function () {
     it('Bar chart time frame- Custom range.', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

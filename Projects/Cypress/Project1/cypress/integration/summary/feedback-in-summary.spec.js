@@ -1,7 +1,7 @@
 //user (student) shall be able to see the feedback provided by a coach.
 describe('user (student) shall be able to see the feedback provided by a coach.', function () {
     it('user (student) shall be able to see the feedback provided by a coach.', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

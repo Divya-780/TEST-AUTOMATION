@@ -1,7 +1,7 @@
 describe(' Test "Sign Up" link is working on speechcoach website', function () {
   it('Verify that "Sign Up" link is present on speechcoach website and navigates correctly', function () {
     //"Sign Up" form is present
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains("Sign Up").click();
     //Sign Up form is displayed correctly

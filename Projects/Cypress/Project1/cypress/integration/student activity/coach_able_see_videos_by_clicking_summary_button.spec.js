@@ -1,7 +1,7 @@
 //Coach shall be able to see the summary of the videos by clicking the summary button.
 describe('Coach shall be able to see the summary of the videos by clicking the summary button.',function(){
 it('Coach shall be able to see the summary of the videos by clicking the summary button.',function(){
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

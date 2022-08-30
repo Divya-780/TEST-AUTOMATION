@@ -2,7 +2,7 @@
 describe("Coach shall be able to provide a feedback.", function () {
   it("Coach shall be able to provide the text and annotation feedback on a students submitted video.", function () {
     //Record a speech and navigate to Activity page.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get("#email").type("divya+feb14@applines.com");

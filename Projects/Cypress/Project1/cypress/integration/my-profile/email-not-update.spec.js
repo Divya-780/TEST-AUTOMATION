@@ -2,7 +2,7 @@
 describe('User shall NOT be able to update the email information.', function () {
     it('User shall NOT be able to update the email information.', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();   
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

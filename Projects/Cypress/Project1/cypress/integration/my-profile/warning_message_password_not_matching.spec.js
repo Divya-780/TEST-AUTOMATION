@@ -2,7 +2,7 @@
 describe('Warning message if the current, new and confirmed password are not matching', function () {
     it('Warning message if the current, new and confirmed password are not matching ', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();   
         cy.get('#email').type('sowbhagya3696+27@gmail.com');

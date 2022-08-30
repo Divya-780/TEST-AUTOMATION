@@ -1,6 +1,6 @@
 describe('Display of speeches in either grid or list view in activity page', function () {
     it(' Verify speeches can be displayed in either grid or list view in activity page ', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();        //sign in and navigate to  the Activity page.
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

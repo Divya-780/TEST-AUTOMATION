@@ -1,7 +1,7 @@
 //Display of filler words in speech waveform
 describe('Display of filler words in speech waveform', function () {
     it('Verify that filler words detected in speech are marked in waveform timeline', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+25@gmail.com');

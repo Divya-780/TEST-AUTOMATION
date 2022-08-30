@@ -1,7 +1,7 @@
 //Upgrade a plan
 describe("Upgrade a plan", function() {
     it("User shall be able to upgrade the current plan.", function() {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains("Sign in").click(); //Login with valid credentials
         cy.get("#email").type("divya@applines.com");

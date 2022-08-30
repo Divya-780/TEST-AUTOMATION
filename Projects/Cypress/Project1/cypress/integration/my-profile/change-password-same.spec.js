@@ -2,7 +2,7 @@
 describe('My Profile, Change Password', function () {
     it(' User shall be directed to the profile page by clicking "My Profile".Warning message if the current, new and confirmed password are same ', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();   
         cy.get('#email').type('sravani+coach@applines.com');

@@ -1,3 +1,4 @@
+//New user shall be able to navigate to the pricing page.
 describe('New user shall be able to navigate to the pricing page', function () {
     it('New user shall be able to navigate to the pricing page to see the available plan options and prices', 
     function () {

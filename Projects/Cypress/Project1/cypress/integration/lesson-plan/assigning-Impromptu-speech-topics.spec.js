@@ -1,7 +1,7 @@
 describe('Assigning the Impromptu speech topics', function () {
     it('Coach shall be able to assign Impromptu speech topics to students.', function () {
       // visit signin url.
-      let url = Cypress.config().baseUrl; //accesing baseUrl
+      let url = Cypress.config().baseUrl;   
       cy.visit(url);
       cy.contains('Sign in').click();      
       cy.get('#email').type('sowbhagya3696+4@gmail.com');

@@ -1,7 +1,7 @@
 //Display of speech waveform
 describe('Display of speech waveform', function () {
     it('Verify that speech waveform is displayed', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+25@gmail.com');

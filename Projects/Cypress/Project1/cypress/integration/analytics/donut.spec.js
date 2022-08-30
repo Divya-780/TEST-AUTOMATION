@@ -2,7 +2,7 @@
 describe('Donut chart-Areas of Improvement', function () {
     it(' User shall be able to view the metrics in donut chart of all the speeches.', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();        
         cy.get('#email').type('divya+feb14@applines.com');

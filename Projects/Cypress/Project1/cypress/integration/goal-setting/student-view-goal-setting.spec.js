@@ -2,7 +2,7 @@
 describe('Student view- goal setting', function () {
     it('Student shall be able to see the goal setting information on the Activity page.', function () {
         //sigin as coach.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();        
         cy.get('#email').type('sowbhagya3696+4@gmail.com');
@@ -21,7 +21,7 @@ describe('Student view- goal setting', function () {
     })
    /* it('student can visible the goal setting.', function () {
         //sigin as student.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();        
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

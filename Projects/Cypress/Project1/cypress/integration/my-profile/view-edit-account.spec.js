@@ -2,7 +2,7 @@
 describe('User shall be able to view/edit their account details.', function () {
     it(' User shall be directed to the profile page by clicking "My Profile". They can view/edit  the basic info such as First Name, Last Name, phone number etc ', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();   
         cy.get('#email').type('sowbhagya3696+18@gmail.com');

@@ -1,7 +1,7 @@
 describe('Edit name of a speech from activity page', function () {
     it('Verify that user shall be able to edit name of a speech from activity page', function () {
         //navigate to Activity page.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+24@gmail.com');

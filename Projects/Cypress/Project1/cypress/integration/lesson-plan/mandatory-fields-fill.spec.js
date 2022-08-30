@@ -3,7 +3,7 @@
 describe(' Mandatory fields to be filled.', function () {
   it('All required fields to be filled before saving the lesson plan.', function () {
     // visit signin Url.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+202@gmail.com');

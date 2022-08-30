@@ -3,7 +3,7 @@
 describe('User shall be able to select a plan and make a payment.', function () {
     it('After using the plan user shall be able to make a payment through stripe.', function () {
     //-- Prcing content verifification --//
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();       
     cy.get('#email').type('sowbhagya3696+735@gmail.com');

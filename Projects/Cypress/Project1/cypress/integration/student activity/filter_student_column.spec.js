@@ -1,7 +1,7 @@
 //Coach shall be able to filter through the student column
 describe('Coach shall be able to filter through the student column',function(){
     it('Coach shall be able to filter through the student column',function(){
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

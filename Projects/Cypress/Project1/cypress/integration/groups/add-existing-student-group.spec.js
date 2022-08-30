@@ -2,7 +2,7 @@
 describe('Add an existing student to the group',function(){
     it('Coach shall be able to add an existing student to the group.',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

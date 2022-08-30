@@ -2,7 +2,7 @@
 describe('Profile settings', function () {
     it('An org admin shall be able to update the profile info.', function () {
     //login with org admin credentials
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();        
     cy.get('#email').type('sowbhagya3696+4org@gmail.com');

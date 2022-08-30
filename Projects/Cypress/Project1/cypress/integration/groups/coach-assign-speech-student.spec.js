@@ -2,7 +2,7 @@
 describe('coach shall be able to assign a speech to a student or the all students in the class. ', function () {
     it('Coach shall be able to assign a lesson plan to students.', function () {
       // visit signin url.
-      let url = Cypress.config().baseUrl; //accesing baseUrl
+      let url = Cypress.config().baseUrl;   
       cy.visit(url);
       cy.contains('Sign in').click();      
       cy.get('#email').type('sowbhagya3696+4@gmail.com');

@@ -1,6 +1,6 @@
 describe('sign up form cannot be submitted with invalid characters', function () {
     it('Verify that user shall NOT be able to sign up using invalid characters', function () {
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign Up').click();    //Signing up without validaTing pswd//   
     cy.get('#email').type('sowbhagya3696+604@gmail.com');

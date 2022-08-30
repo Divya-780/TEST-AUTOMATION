@@ -2,7 +2,7 @@
 describe("Coach shall be able to see  a feedback.", function () {
   it("Coach shall be able to see feedback in summary page", function () {
     //Record a speech and navigate to Activity page.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get("#email").type("divya+feb14@applines.com");

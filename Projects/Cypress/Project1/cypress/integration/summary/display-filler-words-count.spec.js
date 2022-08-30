@@ -2,7 +2,7 @@
 describe('Display of filler words and their count in Verbal Chart ', function () {
     it('Verify that filler words and their count are displayed in Verbal Chart', function () {
         //navigate to Activity page.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+25@gmail.com');

@@ -2,7 +2,7 @@
 describe('selecting the impromptu topic from existing categories', function () {
     it('User(coach) shall be able to assign the impromptu speech topics from the existing categories.', function () {
         // visit signin url.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();        
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

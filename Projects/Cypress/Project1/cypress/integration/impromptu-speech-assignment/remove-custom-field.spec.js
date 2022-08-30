@@ -2,7 +2,7 @@
 describe('Remove custom field while assigning custom question to the student', function () {
     it('user(coach) shall be able to remove custom question', function () {
       // visit signin url.
-      let url = Cypress.config().baseUrl; //accesing baseUrl
+      let url = Cypress.config().baseUrl;   
       cy.visit(url);
       cy.contains('Sign in').click();      
       cy.get('#email').type('sowbhagya3696+4@gmail.com');

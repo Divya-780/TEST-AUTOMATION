@@ -3,7 +3,7 @@
 describe('calendar in the group displays the recurrence of the zoom session ', function () {
     it('calendar in the group displays the recurrence of the zoom session', function () {
       // visit signin url.
-      let url = Cypress.config().baseUrl; //accesing baseUrl
+      let url = Cypress.config().baseUrl;   
       cy.visit(url);
       cy.contains('Sign in').click();      
       cy.get('#email').type('sowbhagya3696+4@gmail.com');

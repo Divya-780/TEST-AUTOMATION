@@ -2,7 +2,7 @@
 describe('Goal setting- disable', function () {
     it('Coach shall be able to disable the goal setting option..', function () {
         //sigin as coach.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();        
         cy.get('#email').type('sowbhagya3696+202@gmail.com');

@@ -2,7 +2,7 @@
 describe('User shall be able to filter the speeches (assigned lesson, Impromptu and ad hoc recorded videos)', function () {
     it(' User shall be able to filter the speeches (assigned lesson, Impromptu and ad hoc recorded videos)', function () {
         //Display for each speech in activity page.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

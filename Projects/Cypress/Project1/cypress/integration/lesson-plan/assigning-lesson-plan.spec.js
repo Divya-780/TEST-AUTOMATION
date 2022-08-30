@@ -4,7 +4,7 @@ describe('Assigning the lesson plan. ', function () {
   it('Coach shall be able to assign a lesson plan to students.', function () {
     // visit signin url.
     cy.wait(2000)
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

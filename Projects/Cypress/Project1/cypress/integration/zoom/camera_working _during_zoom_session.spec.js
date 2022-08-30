@@ -2,7 +2,7 @@
 describe("Camera is working during the zoom session (user permission)", function () {
   it("Camera is working during the zoom session (user permission)", function () {
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get("#email").type("sowbhagya3696+4@gmail.com");

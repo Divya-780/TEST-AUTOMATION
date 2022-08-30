@@ -1,7 +1,7 @@
 describe('Download a speech from activity page', function () {
     it('Verify that user shall be able to download a speech from activity page', function () {
         // sign and navigating to activity page
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+4@gmail.com');

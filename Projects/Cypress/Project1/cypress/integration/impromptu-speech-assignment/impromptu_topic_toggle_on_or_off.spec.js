@@ -2,7 +2,7 @@
 describe('Coach shall be able to select or dis-select the impromptu topic by toggle option on/off', function () {
   it('//Coach shall be able to select or dis-select the impromptu topic by toggle option on/off', function () {
     // visit signin url.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();
     cy.get('#email').type('sowbhagya3696+4@gmail.com');

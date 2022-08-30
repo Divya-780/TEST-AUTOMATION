@@ -1,7 +1,7 @@
 //User shall be able to cancel the subscription
 describe("User shall be able to cancel the subscription", function() {
     it("User shall be able to cancel the subscription ", function() {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains("Sign in").click(); //Login with valid credentials
         cy.get("#email").type("sowbhagya3696+25@gmail.com");

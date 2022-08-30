@@ -2,7 +2,7 @@ describe('Performance scores and summary shall be displayed for each speech in a
     it(' Verify that visual, voice, verbal scores and summary are displayed for speeches in activity page', function () {
         //Display for each speech in activity page.
 
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+105@gmail.com');

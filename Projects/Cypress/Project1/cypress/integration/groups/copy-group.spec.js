@@ -2,7 +2,7 @@
 describe('Copy the group',function(){
     it('Coach shall be able to copy the group.',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl; //accesing baseUrl
+    let url = Cypress.config().baseUrl;   
     cy.visit(url);
     cy.contains('Sign in').click();    
     cy.get('#email').type('divya+feb14@applines.com');

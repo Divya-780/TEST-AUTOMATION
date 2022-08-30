@@ -2,7 +2,7 @@
 describe('Trend line chart', function () {
     it(' User shall be able to view the trend line  chart of all the speeches and metrics ', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();    
         cy.get('#email').type('divya+feb14@applines.com');

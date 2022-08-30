@@ -1,7 +1,7 @@
 //Display of Performance scores, video, transcript, waveform and Overall Assessment
 describe('Display of Performance scores, video, transcript, waveform and Overall Assessment', function () {
     it('Verify that Performance scores, video, transcript, waveform and Overall Assessment shall be displayed', function () {
-        let url = Cypress.config().baseUrl; //accesing baseUrl
+        let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();         
         cy.get('#email').type('sowbhagya3696+18@gmail.com');
