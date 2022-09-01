@@ -18,7 +18,7 @@ describe('Add an existing student to the group',function(){
     cy.get('#firstName').type('sowji')
     cy.get('#lastName').type('vajji')
     cy.contains('Search').click()
-    cy.contains('No user found with that search criteria')
+    cy.contains('User not found with a role Student')
     cy.get('.p-toast-icon-close-icon').click()
     cy.get('#firstName').clear().type('autouser')
     cy.get('#lastName').clear()

@@ -2,7 +2,7 @@
 describe('Able to join zoom session (student)', function () {
     it('Able to join zoom session (coach)', function () {
       //Login with coach credentials.
-      let url = Cypress.config().baseUrl;   
+      let url = Cypress.config().baseUrl; //accesing baseUrl
       cy.visit(url);
       cy.contains('Sign in').click();
       cy.get('#email').type('sowbhagya3696+181@gmail.com');
@@ -15,5 +15,7 @@ describe('Able to join zoom session (student)', function () {
      //join zoom session
      cy.get('.nav-link').eq(0).click()
      cy.get('.zm-btn').click()
+    //-- VALIDATION-- // 
+
     })
   })

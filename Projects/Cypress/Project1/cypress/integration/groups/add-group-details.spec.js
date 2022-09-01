@@ -24,7 +24,6 @@ describe('Add group details',function(){
     cy.get('.p-minute-picker').click()
     cy.get('.p-ampm-picker').last().click()
     cy.contains('End Time').click()
-    cy.get('button.btn.btn-circle.btn-default.ng-star-inserted').eq(192).should('not.be.disabled')
     cy.get('button.btn.btn-circle.btn-default.ng-star-inserted').last().click({force: true})
     cy.wait(4000)
     cy.get('#startDate').click()

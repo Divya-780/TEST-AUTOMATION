@@ -2,9 +2,9 @@
 describe('User shall get an error message if any field is missing the required information.', function () {
     it('User shall get an error message if any field is missing the required information.', function () {
         //login as a valid user.
-        let url = Cypress.config().baseUrl;   
+        let url = Cypress.config().baseUrl; //accesing baseUrl
         cy.visit(url);
-        cy.contains('Sign in').click();   
+        cy.contains('Sign in').click();
         cy.get('#email').type('sowbhagya3696+18@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
@@ -19,7 +19,7 @@ describe('User shall get an error message if any field is missing the required i
         cy.get('#email');
         cy.get('#phone').clear().type(9874563217);
         //Click Save Profile after making changes.
-        cy.contains('Save Profile').dblclick();
+        cy.contains('Save Profile').should('be.disabled');
         //VALIDATION
         cy.contains('Last name required');
     })

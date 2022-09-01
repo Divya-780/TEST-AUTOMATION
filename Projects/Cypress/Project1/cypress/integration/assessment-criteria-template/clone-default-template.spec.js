@@ -2,28 +2,32 @@
 describe('Clone default template',function(){
     it('Coach should be able to clone template from the default template',function(){
     //Login with coach credentials.
-    let url = Cypress.config().baseUrl;   
+    let url = Cypress.config().baseUrl; //accesing baseUrl
     cy.visit(url);
     cy.contains('Sign in').click(); 
     cy.get('#email').type('sowbhagya3696+4@gmail.com');
     cy.get('#password').type('Sathwik@1719');
     cy.get('form').submit();
-    cy.wait(4000)
-    //Coach shall be able to clone the default template
-    cy.get('.nav-item').invoke('show');
+    //Validation - After sign in, It should redirect to the activity page
+    cy.url().should("contain", '/activity/history');
+
+
+    //Access the Assessment criteria
     cy.get('[routerlink="/user/assessment-template"]').click({force: true});
-    cy.get('.active > .nav-link').click()
-    cy.wait(2000)
-    cy.get('.fa-clone').last().click();
-    cy.wait(1000)
-    cy.get('.form-control').type('sowji')
-    cy.get('.form-select').select('Beginner').should('have.value', 'Beginner');
-    cy.get('input[type="checkbox"').eq(3).check({force: true});
-    cy.get('input[type="checkbox"').eq(5).check({force: true});
-    cy.get('.fa').eq(2).type('0');
-    cy.get('.fa').eq(4).type('0');
-    cy.get('.btn').click();
+    //Coach shall be able to clone the default template
+    cy.get('.fa-clone').first().click();
+    cy.wait(4000)
+    cy.get('.form-control').type('custom template')
+    cy.get('.form-select').select('Advanced').should('have.value', 'Advanced');
+    cy.get('.fa-pencil').eq(2).click()
+    cy.get('.ng-pristine').clear().type('50')
+    cy.get('.p-checkbox-box').eq(3).click()
+
+    cy.get('.fa-pencil').eq(5).click()
+    cy.get('.ng-pristine').clear().type('50')
+    cy.get('.p-checkbox-box').eq(6).click()
+    cy.get('.btn').click()
     //-- VALIDATION --// 
-    cy.contains('sowji');
+    cy.contains('custom template');
     })
 })
