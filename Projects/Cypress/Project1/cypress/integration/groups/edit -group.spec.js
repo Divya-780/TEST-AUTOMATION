@@ -11,12 +11,15 @@ describe('Edit the group',function(){
     cy.get('.nav-item').invoke('show');
     cy.get('[routerlink="/user/groups"]').click({force: true});
     cy.wait(4000);
-    cy.get('#dropdownOne').click();
+    cy.get('.fe-more-vertical').eq(0).click();
     cy.wait(1000)
     cy.contains('Edit').click();
+    cy.wait(2000);
     cy.get('#name').clear().type('sowji');
     cy.get('#level').select('Beginner').should('have.value','Beginner');
-    cy.get('.p-dialog-footer > .btn').click();
+    cy.get('.p-dialog-footer').contains('Update').click();
+    cy.contains('Proceed').click();
+    cy.wait(2000);
     //VALIDATION
     cy.contains('sowji');  
     })
