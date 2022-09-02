@@ -15,12 +15,8 @@ describe('Performance scores and summary shall be displayed for each speech in a
         cy.contains('Visual');
         cy.contains('Voice');
         cy.contains('Verbal');
-
-        // Verify that user assessment summaries are displayed
-        cy.get('.mr-3').eq(0)
-        cy.wait(4000);
-        cy.get('.pt-3').eq(0).should('be.visible').click();
-
+        cy.contains('Summary').click({force:true})
+        cy.wait(2000);
         //-- VALIDATION - Verify that user  assessment summary
         cy.url().should("contain", '/summary');
     })

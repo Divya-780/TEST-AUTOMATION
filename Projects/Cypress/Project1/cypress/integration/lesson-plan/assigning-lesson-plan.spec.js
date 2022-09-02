@@ -14,7 +14,6 @@ describe("Assigning the lesson plan. ", function() {
         cy.get(".nav-item").invoke("show");
         cy.get('[routerlink="/user/groups"]').click({ force: true });
         //Select the Speech, Date assigned, Due date for assignment.
-        // cy.contains("teju").focus().click();
         cy.get(".text-capitalize").eq(1).click();
         cy.get("#p-tabpanel-1-label").click();
         cy.contains("New Assignment ").click();
