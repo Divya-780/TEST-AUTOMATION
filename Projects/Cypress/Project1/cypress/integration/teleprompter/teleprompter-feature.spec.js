@@ -15,6 +15,9 @@ describe("User(student) shall be able to use the teleprompter feature", function
         cy.wait(1000);
 
         //turn on the teleprompter inputs
+        //font color
+        cy.get(".pl-15").click();
+        cy.contains("#ff5722");
         //select the font size.
         cy.get(".p-dropdown-trigger").eq(0).click();
         cy.get(".p-dropdown-item").eq(0).click();
