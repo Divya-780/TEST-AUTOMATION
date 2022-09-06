@@ -53,8 +53,8 @@ describe("Coach shall be able to provide a feedback.", function () {
     cy.contains("Done").click();
 
     //FEEDBACK BUBBLE IS ACTVATING OR NOT
-    // cy.get(".text-primary")
-    //   .eq(0)
-    //   .should("have.css", "color", "rgb(161, 202, 201)");
+    cy.get(".text-primary")
+      .eq(0)
+      .should("have.css", "color", "rgb(161, 202, 201)");
   });
 });

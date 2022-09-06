@@ -15,10 +15,10 @@ describe("User shall be able to cancel the subscription", function() {
         cy.contains("Cancel Subscription").click();
         cy.wait(5000);
         // cy.get(".p-confirm-dialog-reject").click({ force: true });
-        cy.get(".p-confirm-dialog-accept").click({ force: true });
-        //-- VALIDATION --//
-        cy.contains(
-            "Subscription cancelled, but will be valid till the end of the period."
-        ).should("exist");
+        // cy.get(".p-confirm-dialog-accept").click({ force: true });
+        // //-- VALIDATION --//
+        // cy.contains(
+        //     "Subscription cancelled, but will be valid till the end of the period."
+        // ).should("exist");
     });
 });
