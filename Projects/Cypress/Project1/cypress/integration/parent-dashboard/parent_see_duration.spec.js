@@ -14,6 +14,6 @@ describe('Parent shall be able to see the number of speeches practiced', functio
      //duration
      cy.get('[psortablecolumn="duration"]').click()
      //-- VALIDATION-- // 
-     cy.url().should('contain', 'analytics');
+     cy.get('.ng-star-inserted').eq(3).should("exist")
     })
    })

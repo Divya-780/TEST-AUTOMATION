@@ -12,6 +12,6 @@ describe('Parent shall be able to select and view profiles between the kids if 1
      cy.get('.p-dropdown-trigger-icon').click()
      cy.get('.p-dropdown-item').first().click()
      //-- VALIDATION-- // 
-     cy.url().should('contain', 'studentactivity');
+     // we can observe the student list in dropdown
     })
    })

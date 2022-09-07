@@ -1,6 +1,6 @@
-//Add group details
-describe("Add group details", function() {
-    it("Coach shall be able to create the group by adding all the required details such as group name, level, class time and duration and class recurrence.", function() {
+//Coach shall get an error missing any required field is missing  while saving group.
+describe("Coach shall get an error missing any required field is missing  while saving.", function() {
+    it("Coach shall get an error missing any required field is missing  while saving. ", function() {
         //Login with coach credentials.
         let url = Cypress.config().baseUrl;
         cy.visit(url);
@@ -24,7 +24,6 @@ describe("Add group details", function() {
         cy.get(".p-minute-picker").click();
         cy.get(".p-ampm-picker").last().click();
         cy.contains("End Time").click();
-        cy.get("button.btn.btn-circle.btn-default").last().click({ force: true });
         cy.wait(4000);
         cy.get("#startDate").click();
         cy.get(".p-datepicker-today").first().click();
@@ -33,6 +32,6 @@ describe("Add group details", function() {
         //click Add
         cy.get(".btn").last().click();
         //VALIDATION
-        cy.contains("tester");
+        cy.contains("Please select at least one Class Recurrence");
     });
 });

@@ -1,6 +1,5 @@
-//Default landing page should be the Child's Activity page
-describe('Default landing page should be the Childs Activity page', function () {
-    it('Default landing page should be the Childs Activity page ', function () {
+describe('Parent shall able to see scores on assigned lesson plan on activity page', function () {
+    it('see scores on activity page ', function () {
      //login as a valid user.
      let url = Cypress.config().baseUrl;   
      cy.visit(url);
@@ -10,8 +9,7 @@ describe('Default landing page should be the Childs Activity page', function () 
      cy.get('form').submit();
      //-- VALIDATION-- // 
      cy.url().should('contain', 'studentactivity');
-     cy.get('.p-shadow-4').its('length').should('be.gte', 4)
-
+     cy.get('.p-datatable-tbody').contains('96')
+    //  we can observer the scores manually
     })
    })
-

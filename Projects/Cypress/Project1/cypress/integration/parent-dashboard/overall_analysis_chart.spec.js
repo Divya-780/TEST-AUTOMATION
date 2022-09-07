@@ -15,6 +15,6 @@ describe('Parent shall be able to see the overall analysis chart', function () {
      cy.contains('Overall Analysis').click()
      cy.get('.fas').eq(2).click()
      //-- VALIDATION-- // 
-     cy.url().should('contain', 'analytics');
+     cy.get('.chartjs-render-monitor')
     })
    })

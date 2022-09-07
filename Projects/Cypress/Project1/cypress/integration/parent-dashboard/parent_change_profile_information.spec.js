@@ -14,7 +14,7 @@ describe('Parent shall be able to change the profile information ', function () 
      cy.get('#fname').clear().type('sowbhagya')
      cy.get('#lname').clear().type('lakshmi')
      cy.get('#phone').clear().type('9848328832')
-     //Click Save Profile after making changes.
+     //Click Save Profile button
      cy.get('.btn').first().click()
      //VALIDATION
      cy.contains('Saved Successfully.')

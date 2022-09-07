@@ -4,7 +4,7 @@ describe('Download a speech from activity page', function () {
         let url = Cypress.config().baseUrl;   
         cy.visit(url);
         cy.contains('Sign in').click();
-        cy.get('#email').type('sowbhagya3696+4@gmail.com');
+        cy.get('#email').type('sowbhagya3696+181@gmail.com');
         cy.get('#password').type('Sathwik@1719');
         cy.get('form').submit();
         //Validation - After sign in, It shuld redirect to the activity page

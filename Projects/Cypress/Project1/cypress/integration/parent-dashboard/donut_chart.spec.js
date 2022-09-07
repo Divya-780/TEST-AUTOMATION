@@ -1,6 +1,5 @@
-//Parent shall be able to see the streaks achieved
-describe('Parent shall be able to see the streaks achieved', function () {
-    it('Parent shall be able to see the streaks achieved ', function () {
+describe('Parent shall be able to see the donut chart', function () {
+    it('Parent shall be able to see the donut chart', function () {
      //login as a valid user.
      let url = Cypress.config().baseUrl;   
      cy.visit(url);
@@ -11,9 +10,8 @@ describe('Parent shall be able to see the streaks achieved', function () {
      cy.wait(4000)
      //click on Analytics
      cy.get('.nav-link').eq(2).click()
-     //streak
-     cy.get('[psortablecolumn="streak"]').click()
-     //-- VALIDATION-- // 
-     cy.get('.p-datatable-tbody').eq(2).should("exist")
+     cy.url().should('contain', 'analytics');
+     cy.get('.form-select').eq(0).select('Last Week')
+     cy.get('.chartjs-render-monitor')
     })
    })

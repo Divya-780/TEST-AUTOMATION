@@ -11,7 +11,7 @@ describe('Warning error if any required field is missing or entered incorrectly 
      cy.wait(2000)
      cy.get('.nav-link').eq(4).click()
      //click on change password
-     cy.get('[routerlink="/PasswordValidation"]').click({force: true});
+     cy.get('[routerlink="/PasswordValidation"]').click();
      cy.get('#oldPassword').click()
      cy.get('#newPassword').click()
     //Validation

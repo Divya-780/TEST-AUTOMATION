@@ -15,6 +15,6 @@ describe('Parent shall be able to see the 3V score chart', function () {
      cy.contains('Visual Voice Verbal').click()
      cy.get('.fas').eq(3).click()
      //-- VALIDATION-- // 
-     cy.url().should('contain', 'analytics');
+     cy.get('.p-dialog-content')
     })
    })
