@@ -8,9 +8,6 @@ describe("Assigning Custom template to the students", function () {
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     cy.wait(4000);
-    //Validation - After sign in, It should redirect to the activity page
-    cy.url().should("contain", "/activity/history");
-
     //Access the Assessment criteria
     cy.get('a[href*="/user/assessment-template"]').click({ force: true });
     cy.wait(2000);
