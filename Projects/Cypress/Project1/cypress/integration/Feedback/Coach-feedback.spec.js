@@ -25,13 +25,13 @@ describe("Coach shall be able to provide a feedback.", function () {
     cy.get(".form-select").select("Make eye contact.");
     cy.get(".form-control").should("have.value", "Make eye contact.");
     cy.get(".radio-opal :checked").should("be.checked");
-    cy.get(".text-center > .btn-secondary").click();
+    cy.get(".text-center").click();
     cy.wait(2000);
     cy.contains("Play/Pause").click();
     cy.get(".form-select").select("Great use of hand gestures.");
     cy.get(".form-control").should("have.value", "Great use of hand gestures.");
     cy.get(".radio-purple :checked").should("be.checked");
-    cy.get(".text-center > .btn-secondary").click();
+    cy.get(".text-center").click();
     cy.wait(2000);
     cy.contains("Play/Pause").click();
 
@@ -47,14 +47,16 @@ describe("Coach shall be able to provide a feedback.", function () {
 
     //DELETE COMMENT/ANNOTATION
     cy.get(".fa-trash").eq(1).click();
-    cy.get(".p-button-label").contains('Yes').click({force:true});
-    
+    cy.get(".p-button-label").contains("Yes").click({ force: true });
+
     cy.get(".p-inputswitch-slider").click();
     cy.contains("Done").click();
 
     //FEEDBACK BUBBLE IS ACTVATING OR NOT
-    cy.get(".text-primary")
+    cy.get(".text-secondary")
       .eq(0)
       .should("have.css", "color", "rgb(161, 202, 201)");
+    //--TEAR DOWN --//
+    cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });

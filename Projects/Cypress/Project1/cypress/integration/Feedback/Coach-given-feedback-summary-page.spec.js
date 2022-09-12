@@ -2,7 +2,7 @@
 describe("Coach shall be able to see  a feedback.", function () {
   it("Coach shall be able to see feedback in summary page", function () {
     //Record a speech and navigate to Activity page.
-    let url = Cypress.config().baseUrl;   
+    let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get("#email").type("divya+feb14@applines.com");
@@ -10,7 +10,7 @@ describe("Coach shall be able to see  a feedback.", function () {
     cy.get("form").submit();
     cy.contains("Student Activity").click();
     cy.wait(2000);
-    
+
     //SELECTING VIDEO FOR FEEDBACK
     cy.get(".p-shadow-4").eq(4).click();
 
@@ -27,5 +27,8 @@ describe("Coach shall be able to see  a feedback.", function () {
     cy.wait(3000);
     //--VALIDATION--//
     //Observe that the coach given feedback is displaying on video  while video is playing
+
+    //--TEAR DOWN --//
+    cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });

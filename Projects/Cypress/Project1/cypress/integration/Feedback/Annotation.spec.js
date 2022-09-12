@@ -2,7 +2,7 @@
 describe("Coach shall be able to provide a feedback.", function () {
   it("Coach shall be able to provide the text and annotation feedback on a students submitted video.", function () {
     //Record a speech and navigate to Activity page.
-    let url = Cypress.config().baseUrl;   
+    let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
     cy.get("#email").type("divya+feb14@applines.com");
@@ -29,7 +29,7 @@ describe("Coach shall be able to provide a feedback.", function () {
       .trigger("mousedown", "center")
       .trigger("mousemove", 20, 37)
       .trigger("mouseup", 22, 17);
-    cy.get(".text-center > .btn-secondary").click();
+    cy.get(".text-center").click();
     cy.wait(1000);
     cy.contains("Play/Pause").click();
     cy.wait(3000);
@@ -42,7 +42,7 @@ describe("Coach shall be able to provide a feedback.", function () {
       .trigger("mousedown", "center")
       .trigger("mousemove", 300, 280) // from center to just inside top left
       .trigger("mouseup");
-    cy.get(".text-center > .btn-secondary").click();
+    cy.get(".text-center").click();
     cy.wait(1000);
     cy.contains("Play/Pause").click();
     cy.wait(3000);
@@ -55,7 +55,7 @@ describe("Coach shall be able to provide a feedback.", function () {
       .trigger("mousedown", "center")
       .trigger("mousemove", 20, 37)
       .trigger("mouseup", 22, 17);
-    cy.get(".text-center > .btn-secondary").click();
+    cy.get(".text-center").click();
     cy.contains("Play/Pause").click();
     cy.wait(3000);
     cy.contains("Play/Pause").click();
@@ -68,7 +68,7 @@ describe("Coach shall be able to provide a feedback.", function () {
       .trigger("mousemove", 20, 37)
       .trigger("mouseup", 22, 17)
       .type("please make eye contact");
-    cy.get(".text-center > .btn-secondary").click();
+    cy.get(".text-center").click();
     cy.contains("Play/Pause").click();
     cy.wait(2000);
     cy.contains("Play/Pause").click();
@@ -92,5 +92,8 @@ describe("Coach shall be able to provide a feedback.", function () {
       .trigger("mousemove", 20, 37)
       .trigger("mouseup", 22, 17)
       .click();
+      
+    //--TEAR DOWN --//
+    cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });
