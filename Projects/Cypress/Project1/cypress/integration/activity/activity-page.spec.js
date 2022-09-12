@@ -1,18 +1,20 @@
-describe('Display of newly recorded speech in activity page', function () {
-    it(' Verify new speech recorded by user shows up in activity page', function () {
-        //Record a speech and navigate to Activity page.
-        let url = Cypress.config().baseUrl;   
-        cy.visit(url);
-        cy.contains('Sign in').click();
-        cy.get('#email').type('sowbhagya3696+105@gmail.com');
-        cy.get('#password').type('Sathwik@1719');
-        cy.get('form').submit();
-        //Validation - After sign in, It should redirect to the activity page
-        cy.url().should("contain", '/activity/history');
+describe("Display of newly recorded speech in activity page", function () {
+  it(" Verify new speech recorded by user shows up in activity page", function () {
+    //Record a speech and navigate to Activity page.
+    let url = Cypress.config().baseUrl;
+    cy.visit(url);
+    cy.contains("Sign in").click();
+    cy.get("#email").type("sowbhagya3696+105@gmail.com");
+    cy.get("#password").type("Sathwik@1719");
+    cy.get("form").submit();
+    //Validation - After sign in, It should redirect to the activity page
+    cy.url().should("contain", "/activity/history");
 
-        //VALIDATION-verifying Newly recorded speeches in Activity page.
-        cy.contains('Visual');
-        cy.contains('Voice');
-        cy.contains('Verbal');
-    })
-})
+    //VALIDATION-verifying Newly recorded speeches in Activity page.
+    cy.contains("Visual").should("exist");
+    cy.contains("Voice").should("exist");
+    cy.contains("Verbal").should("exist");
+    //--TEAR DOWN --//
+    cy.get(".fa-sign-out-alt").click({ force: true });
+  });
+});
