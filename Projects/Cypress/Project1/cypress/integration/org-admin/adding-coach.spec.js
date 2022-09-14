@@ -25,8 +25,9 @@ describe('Adding a coach', function () {
         cy.get('.modal-footer > .btn').click()
         //VALIDATION
         cy.contains('New coach added successfully')
-        //view all existing coaches in the org
-        cy.url('https://dev02.speechpundit.com/org-admin/coaches')
+        //--TEAR DOWN--//
+        cy.get('.user-img').click();
+        cy.contains('Logout').click();
 
     })
 })

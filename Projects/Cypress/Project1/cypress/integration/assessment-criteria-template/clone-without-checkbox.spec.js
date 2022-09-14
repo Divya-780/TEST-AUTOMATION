@@ -9,8 +9,10 @@ describe("while copying the default template, if the user forgot to click the ch
     cy.get("form").submit();
 
     // Go to Assessment Criteria template page
-    cy.get('[routerlink="/user/assessment-template"]').click({ force: true });
-    cy.url().should("contain", "/user/assessment-template");
+    cy.get(".nav-item").invoke("show");
+    cy.get("#menu-2 ").trigger("mouseover");
+    cy.get(".dropdown").should("be.visible");
+    cy.contains("Assessment Criteria").click({ force: true });
     // Clone the default template
     cy.get(".fa-clone").click();
     // Validation
@@ -22,7 +24,7 @@ describe("while copying the default template, if the user forgot to click the ch
     cy.get(".ng-pristine").clear().type("100");
     cy.get(".btn").click();
     cy.contains("Please select atleast one checkbox").should("exist");
-     //--TEAR DOWN --//
+    //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });

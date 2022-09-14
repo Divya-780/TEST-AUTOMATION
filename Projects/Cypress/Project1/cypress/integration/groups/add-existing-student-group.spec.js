@@ -1,4 +1,4 @@
-//Add an existing student to the group
+                        //Add an existing student to the group
 describe("Add an existing student to the group", function () {
   it("Coach shall be able to add an existing student to the group.", function () {
     //Login with coach credentials.
@@ -9,8 +9,10 @@ describe("Add an existing student to the group", function () {
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //visit group url
-    cy.get('a[href*="/user/groups"]').click({ force: true });
-    cy.wait(4000);
+    cy.get(".nav-item").invoke("show");
+    cy.get("#menu-2 ").trigger("mouseover");
+    cy.get(".dropdown").should("be.visible");
+    cy.contains("Groups").click({ force: true });
     //Click "Add existing student
     cy.get(".text-capitalize").eq(2).click();
     cy.get(".mr-1").click();

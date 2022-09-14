@@ -11,13 +11,13 @@ describe("Download a speech from activity page", function () {
     cy.url().should("contain", "/activity/history");
     cy.wait(4000);
     // By clicking on more option, we should select delete button
-    cy.get(".fe-more-vertical").eq(0).click();
-    cy.get(".fa-trash-alt").eq(0).click();
+    // cy.get(".fe-more-vertical").eq(0).click();
+    // cy.get(".fa-trash-alt").eq(0).click();
     // Validation - Deletion prompt should be displayed
-    cy.contains("Delete Video");
-    cy.contains(
-      "Deleted video will not be shown anywhere. Are you sure you want to delete?"
-    ).should("exist");
+    // cy.contains("Delete Video");
+    // cy.contains(
+    //   "Deleted video will not be shown anywhere. Are you sure you want to delete?"
+    // ).should("exist");
     // Click on the delete button in the prompt
     // cy.get('.p-dialog-footer > .btn').click()
 

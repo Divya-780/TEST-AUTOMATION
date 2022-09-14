@@ -10,8 +10,10 @@ describe("Clone default template", function () {
     cy.get("form").submit();
 
     //Access the Assessment criteria
-    cy.get('a[href*="/user/assessment-template"]').click({ force: true });
-
+    cy.get(".nav-item").invoke("show");
+    cy.get("#menu-2 ").trigger("mouseover");
+    cy.get(".dropdown").should("be.visible");
+    cy.contains("Assessment Criteria").click({ force: true });
     //Coach shall be able to clone the default template
     cy.get(".fa-clone").first().click();
     cy.wait(4000);

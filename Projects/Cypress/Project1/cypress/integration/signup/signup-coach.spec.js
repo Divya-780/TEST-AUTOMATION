@@ -14,7 +14,7 @@ describe('user shall be able to sign up as Coach', function () {
     //Redirecting to signup page
     cy.get('#email').type(email);
     cy.get('#firstName').type(fname);
-    cy.get('#lastName').type(yyyymmdd.concat(hhmmss));
+    cy.get('#lastName').type('lname');
     cy.get('#password').type('Sathwik@1719');
     cy.get('[Value="Coach"]').check({force: true});//sign up as Coach.
     cy.get('#acceptTerms').click()

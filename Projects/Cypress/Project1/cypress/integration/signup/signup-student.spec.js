@@ -10,7 +10,7 @@ describe('user shall be able to sign up as Student', function () {
     var email = fname.concat(".").concat(yyyymmdd).concat(hhmmss).concat("@applines.com")
     cy.get('#email').type(email);
     cy.get('#firstName').type(fname);
-    cy.get('#lastName').type(yyyymmdd.concat(hhmmss));
+    cy.get('#lastName').type('lname');
     cy.get('#password').type('Sathwik@1719');
   //-- SIGN UP AS A STUDENT --//   
     cy.get('[Value="Student"]').check({ force: true });

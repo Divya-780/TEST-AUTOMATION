@@ -12,8 +12,10 @@ describe("Deleting Custom Template", function () {
     cy.url().should("contain", "/activity/history");
 
     //Access the Assessment criteria
-    cy.get('a[href*="/user/assessment-template"]').click({ force: true });
-    cy.wait(2000);
+    cy.get(".nav-item").invoke("show")
+    cy.get('#menu-2\ ').trigger('mouseover')
+    cy.get('.dropdown').should('be.visible');
+    cy.contains('Assessment Criteria').click({ force: true })
     cy.get(".fa-trash").last().click();
     //-- VALIDATION --//
     // we can observe that last video was deleted

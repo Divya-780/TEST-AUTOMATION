@@ -13,5 +13,7 @@ describe('Parent shall be able to see the Analysis on  top of the analytics page
      cy.get('.nav-link').eq(2).click()
      //-- VALIDATION-- // 
      cy.url().should('contain', 'analytics');
+       //--TEAR DOWN --//
+    cy.get(".fa-sign-out-alt").click({ force: true });
     })
    })

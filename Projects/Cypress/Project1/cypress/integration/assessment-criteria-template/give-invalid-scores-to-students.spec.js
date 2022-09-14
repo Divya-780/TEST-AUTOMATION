@@ -11,7 +11,7 @@ describe("Coach giving invalid scores irrespective of the weight", function () {
     cy.contains("Student Activity").click();
     cy.wait(4000);
     cy.get(".p-shadow-4").first().click({ force: true });
-    cy.wait(4000);
+    cy.wait(6000);
     cy.get(".fa-pencil").eq(0).click();
     cy.get(".p-inputtext").clear().type("100");
     cy.get(".btn").click();

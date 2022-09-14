@@ -9,7 +9,10 @@ describe("Create Assessment Criteria template", function () {
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //Access the Assessment criteria
-    cy.get('a[href*="/user/assessment-template"]').click({ force: true });
+    cy.get(".nav-item").invoke("show");
+    cy.get("#menu-2 ").trigger("mouseover");
+    cy.get(".dropdown").should("be.visible");
+    cy.contains("Assessment Criteria").click({ force: true });
     cy.get(".fa-clone").first().click();
     cy.get(".form-control").type("custom template");
     cy.get(".form-select").select("Advanced").should("have.value", "Advanced");

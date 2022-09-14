@@ -10,5 +10,7 @@ describe('Parent shall be able to login', function () {
      cy.get('form').submit();
      //-- VALIDATION-- // 
      cy.url().should('contain', 'studentactivity');
+    //--TEAR DOWN --//
+    cy.get(".fa-sign-out-alt").click({ force: true });
     })
    })

@@ -13,7 +13,9 @@ describe("Display of Default template in Assessment Criteria page", function () 
 
     //visit assessment criteria template
     cy.get(".nav-item").invoke("show");
-    cy.get('a[href*="/user/assessment-template"]').click({ force: true });
+    cy.get("#menu-2 ").trigger("mouseover");
+    cy.get(".dropdown").should("be.visible");
+    cy.contains("Assessment Criteria").click({ force: true });
     // Validation - user should redirect to assessment criteria template page
     cy.url().should("contain", "user/assessment-template").should("exist");
     //--TEAR DOWN --//
