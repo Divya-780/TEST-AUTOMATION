@@ -13,6 +13,6 @@ describe("User shall be able to redirect to favorites page", function () {
     cy.contains("Favorites").should("exist");
     // cy.get(".list-group-item").its("length").should("eq", 2);
     //--TEAR DOWN --//
-    cy.get(".fa-sign-out-alt").click({ force: true });
+    // cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });
