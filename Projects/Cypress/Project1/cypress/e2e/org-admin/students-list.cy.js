@@ -1,22 +1,18 @@
 //Students list
-describe("Students list", function () {
-  it(" An org admin shall be able to view list of all students and associated coaches in the org.", function () {
-    cy.wait(2000);
-    //login with org admin credentials
-    let url = Cypress.config().baseUrl;
-    cy.visit(url);
-    cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4org@gmail.com");
-    cy.get("#password").type("boulder");
-    cy.get("form").submit();
-    cy.wait(4000);
-    //click on Students tab on left side menu bar
-    cy.get(".menu-title").eq(2).click();
-    //VALIDATION
-
-    cy.url().should("contain", "org-admin/users");
-    //--TEAR-DOWN--//
-    cy.get(".user-img").click();
-    cy.contains("Logout").click();
-  });
-});
+describe('Students list', function () {
+    it(' An org admin shall be able to view list of all students and associated coaches in the org.', function () {
+        cy.wait(2000)
+        //login with org admin credentials
+        let url = Cypress.config().baseUrl;   
+        cy.visit(url);
+        cy.contains('Sign in').click();           
+        cy.get('#email').type('sowbhagya3696+4org@gmail.com');
+        cy.get('#password').type('boulder');
+        cy.get('form').submit()
+        cy.wait(4000)
+        //click on Students tab on left side menu bar
+        cy.get('.menu-title').eq(2).click()
+        //VALIDATION
+        cy.url().should("contain", 'users');
+    })
+})

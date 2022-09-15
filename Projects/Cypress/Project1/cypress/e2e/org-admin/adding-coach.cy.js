@@ -18,16 +18,14 @@ describe('Adding a coach', function () {
         var hhmmss = date.getHours().toString().concat(date.getMinutes()).concat(date.getSeconds());
         var email = fname.concat(".").concat(yyyymmdd).concat(hhmmss).concat("@applines.com");
         cy.get('#firstName').type(fname)
-        cy.get('#lastName').type(yyyymmdd.concat(hhmmss));
+        cy.get('#lastName').type('sowji');
         cy.get('#email').type(email);
         cy.get('#age').type(21)
         cy.get('#female').click()
         cy.get('.modal-footer > .btn').click()
         //VALIDATION
         cy.contains('New coach added successfully')
-        //--TEAR DOWN--//
-        cy.get('.user-img').click();
-        cy.contains('Logout').click();
-
+        //view all existing coaches in the org
+        cy.url().should("contain", 'coaches'); 
     })
 })

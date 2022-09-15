@@ -1,6 +1,6 @@
-//Server Admin creating a new org
-describe('As a super admin, I shall be able to create a new org.', function () {
-    it(' sign in with valid credentials', function () {
+//Super admin shall get an warning if any information is missing while creating a new organization
+describe('Super admin shall get an warning if any information is missing while creating a new organization', function () {
+    it('Super admin shall get an warning if any information is missing while creating a new organization ', function () {
     //login as a  super admin.  
      let url = Cypress.config().baseUrl;   
      cy.visit(url);
@@ -17,16 +17,11 @@ describe('As a super admin, I shall be able to create a new org.', function () {
      cy.get('#orgDescription').type('he students choose what and how to learn and are supported in their learning by the teacher. But the ultimate decisions about learning are made by the students.')
      cy.get('#firstName').type('sowji')
      cy.get('#lastName').type('challa')
-     var date = new Date();
-     var fname = "sowbhagya3696+"
-     var yyyymmdd = date.getUTCFullYear().toString().concat(date.getMonth()).concat(date.getUTCDay())
-     var hhmmss = date.getHours().toString().concat(date.getMinutes()).concat(date.getSeconds())
-     var email = fname.concat(".").concat(yyyymmdd).concat(hhmmss).concat("@applines.com")
-     cy.get('#email').type(email)
+    cy.get('#email').click()
      //Click Add.
      cy.contains('Add').click()
      cy.wait(1000)
      //-- VALIDATION --//
-     cy.contains('New Organization added successfully. Login details sent to')
+     cy.contains('Fill in all required fields')
     })
    })

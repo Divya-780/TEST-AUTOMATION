@@ -13,8 +13,8 @@ describe("Download a speech from activity page", function () {
     // By clicking on more option, we should select download button
     cy.get(".fe-more-vertical").eq(0).click();
     // By clicking on the download button the video will be downloaded
-    cy.get(".fa-download").click();
-    cy.wait(2000);
+    // cy.get(".fa-download").click();
+    cy.wait(10000);
     //speech has been downloaded in local floder.
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
