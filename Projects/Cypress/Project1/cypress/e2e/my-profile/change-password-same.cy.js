@@ -1,4 +1,4 @@
-//Warning message if the current, new and confirmed password are not matching
+//Warning message if the current, new and confirmed password are not matching in my profile
 describe("My Profile, Change Password", function () {
   it(' User shall be directed to the profile page by clicking "My Profile".Warning message if the current, new and confirmed password are same ', function () {
     //login as a valid user.
