@@ -19,6 +19,7 @@ describe(" Deleting the lesson plan", function () {
     cy.contains("Can't delete as lesson plan is already in use.").should(
       "exist"
     );
+    cy.get(".p-toast-icon-close-icon").click();
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });
