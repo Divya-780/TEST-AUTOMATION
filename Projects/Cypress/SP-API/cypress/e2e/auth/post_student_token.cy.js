@@ -1,5 +1,5 @@
 describe('POST student token API', function () {
-    it('Verifies that API allows for student_token', function () {
+    it('Verifies that API allows for student_token by hitting change to coach view', function () {
         cy.request({
             method: 'POST',
             url: 'https://dev02.speechpundit.com/api/auth/student_token/',

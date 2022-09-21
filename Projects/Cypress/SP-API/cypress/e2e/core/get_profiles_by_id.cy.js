@@ -1,46 +1,37 @@
-// describe('Profiles API Test', function () {
-//     it('Verifies that API returns all the profiles.', function () {
+describe('GET Profile API', function () {
+    it('Verifies that API returns profile by id', function () {
 
-//         cy.request({
-//             url: 'https://dev02.speechpundit.com/api/core/profiles',
-//             method: "GET",
-//             headers: {
-//                 "Authorization": "Token d2d18ead55ad95e28548267f482483c59becc94b",
-//                 "profile_id": 1
-//             },
-//         }).then(
-//             (response) => {
-//                 // Verify response - status, header values
-//                 expect(response.status).to.eq(200)
-//                 expect(response.headers).to.have.property('content-type', 'application/json')
+        cy.request({
+            url: 'https://dev02.speechpundit.com/api/core/profiles/1/',
+            method: "GET",
+            headers: {
+                "Authorization": "Token 4872aae72371e9a72f50a13aac2f4d92362ca57c"
+            },
+        }).then(
+            (response) => {
+                // Verify response - status, header values
+                expect(response.status).to.eq(200)
+                expect(response.body).to.have.property('id')
+                expect(response.body).to.have.property('subscribed')
+                expect(response.body).to.have.property('emailVerified')
+                expect(response.body).to.have.property('referrer')
+                expect(response.body).to.have.property('subscriptionStartTime')
+                expect(response.body).to.have.property('subscriptionEndTime')
+                expect(response.body).to.have.property('subscriptionCancelled')
+                expect(response.body).to.have.property('previousPlan')
+                expect(response.body).to.have.property('plan')
+                expect(response.body).to.have.property('planRecurring')
+                expect(response.body).to.have.property('paymentCompleted')
+                expect(response.body).to.have.property('phone')
+                expect(response.body).to.have.property('avatar')
+                expect(response.body).to.have.property('animeCharacter')
+                expect(response.body).to.have.property('age')
+                expect(response.body).to.have.property('gender')
+                expect(response.body).to.have.property('zoomUser')
+
                 
-//                 // Verify body 
-//                 console.log(response);
-//                 var num_prfl_entries = response.body.length
-//                 var last_prfl_index = (num_prfl_entries - 1)
-//                 expect(cy.wrap(num_prfl_entries).should('be.eql', 1))
 
-//                 // Verify the presence of properties for each history entry
-//                 expect(response.body[last_prfl_index]).to.have.property('id')
-//                 expect(response.body[last_prfl_index]).to.have.property('subscribed')
-//                 expect(response.body[last_prfl_index]).to.have.property('emailVerified')
-//                 expect(response.body[last_prfl_index]).to.have.property('referrer')
-//                 expect(response.body[last_prfl_index]).to.have.property('subscriptionStartTime')
-//                 expect(response.body[last_prfl_index]).to.have.property('subscriptionEndTime')
-//                 expect(response.body[last_prfl_index]).to.have.property('subscriptionCancelled')
-//                 expect(response.body[last_prfl_index]).to.have.property('previousPlan')
-//                 expect(response.body[last_prfl_index]).to.have.property('plan')
-//                 expect(response.body[last_prfl_index]).to.have.property('planRecurring')
-//                 expect(response.body[last_prfl_index]).to.have.property('paymentCompleted')
-//                 expect(response.body[last_prfl_index]).to.have.property('phone')
-//                 expect(response.body[last_prfl_index]).to.have.property('avatar')
-//                 expect(response.body[last_prfl_index]).to.have.property('animeCharacter')
-//                 expect(response.body[last_prfl_index]).to.have.property('age')
-//                 expect(response.body[last_prfl_index]).to.have.property('gender')
-//                 expect(response.body[last_prfl_index]).to.have.property('zoomUser')
-
-//             }
-//         )
-
-//     })
-// })
+            }
+        )
+    })
+})
