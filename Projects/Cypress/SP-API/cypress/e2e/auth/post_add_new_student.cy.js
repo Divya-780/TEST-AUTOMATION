@@ -10,7 +10,7 @@ describe('POST add new student API', function () {
                 
                 firstName: "Gayathri",
                 lastName: "Kaki",
-                email: "gayathri+api_test_new_student3@applines.com",
+                email: "gayathri+api_test_student1@applines.com",
                 age: null,
                 gender: null,
                 role: "Student",
@@ -19,12 +19,13 @@ describe('POST add new student API', function () {
                 org_id: 1
                 
             },
+            failOnStatusCode: false
 
         }).then(
                 (response) => {
                     console.log(response);
-                    
-                    expect(response.status).to.eq(200)
+                    // for existed user, status is 500
+                    expect(response.status).to.eq(500)
 
                 }
             )

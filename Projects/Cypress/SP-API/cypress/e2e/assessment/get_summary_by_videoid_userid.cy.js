@@ -13,15 +13,11 @@ describe('GET assessment summary API', function () {
                 expect(response.status).to.eq(200)
                 
                 // // Verify body 
-                console.lo(response);
+                console.log(response);
                 expect(response.body).to.have.property('video')
                 expect(response.body).to.have.property('visual')
                 expect(response.body).to.have.property('voice')
                 expect(response.body).to.have.property('verbal')
-
-
-
-                
 
             }
         )

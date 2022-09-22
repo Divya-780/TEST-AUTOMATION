@@ -11,7 +11,6 @@ describe('GET Class student activity API Test', function () {
             (response) => {
                 // Verify response - status, header values
                 expect(response.status).to.eq(200)
-                expect(response.headers).to.have.property('content-type', 'application/json')
             }
         )
     })

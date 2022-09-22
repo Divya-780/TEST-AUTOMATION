@@ -13,15 +13,8 @@ describe('POST assessment report API', function () {
                 expect(response.status).to.eq(200)
                 expect(response.headers).to.have.property('content-type', 'application/json')
                 
-                // Verify body 
-                console.log(response);
-                var num_rpt_entries = response.body.length
-                var last_rpt_index = (num_rpt_entries - 1)
-                expect(cy.wrap(num_rpt_entries).should('be.gte', 1))
-
-                // Verify the presence of properties for each entry
-                expect(response.body[last_rpt_index]).to.have.property('assessments')
-                expect(response.body[last_rpt_index]).to.have.property('totalRecords')
+                expect(response.body).to.have.property('assessments')
+                expect(response.body).to.have.property('totalRecords')
             }
         )
     })

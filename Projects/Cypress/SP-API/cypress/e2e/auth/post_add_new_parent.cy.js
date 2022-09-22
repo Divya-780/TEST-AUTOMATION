@@ -9,7 +9,7 @@ describe('POST add new parent API', function () {
             body:{
                 firstName: "Gayathri",
                 lastName: "test",
-                email: "gayathri+test_parent1@applines.com",
+                email: "gayathri+api_test_parent1@applines.com",
                 gender: null,
                 role: "Parent",
                 acceptTerms: null,
@@ -17,11 +17,12 @@ describe('POST add new parent API', function () {
                 student_id: 2484,
                 user_role: "Student"                
             },
+            failOnStatusCode: false
 
         }).then(
                 (response) => {
                     console.log(response);
-                    
+                    // parent can be added for one or more students
                     expect(response.status).to.eq(200)
                 }
             )
