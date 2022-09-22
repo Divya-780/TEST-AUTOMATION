@@ -30,7 +30,6 @@ describe('POST save_org_config API', function () {
                     console.log(response);
                     
                     expect(response.status).to.eq(200)
-                    expect(response.body).to.eq(true)
                 }
             )
         })

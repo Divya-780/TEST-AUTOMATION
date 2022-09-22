@@ -15,7 +15,7 @@ describe('GET Organization API', function () {
                 
                 // Verify body 
                 console.log(response);
-                expect(response.body).to.have.property("id",1)
+                expect(response.body).to.have.property("id")
                 expect(response.body).to.have.property("name")
                 expect(response.body).to.have.property("description")
 
