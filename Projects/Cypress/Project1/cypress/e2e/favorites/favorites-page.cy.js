@@ -9,6 +9,7 @@ describe("User shall be able to redirect to favorites page", function() {
         cy.get("form").submit();
         //navigate to Favorites page
         cy.get('[routerlink="/activity/favorites"]').click();
+        cy.wait(4000);
         //verify that favorites page is opened or not
         cy.contains("Favorites").should("exist");
         // cy.get(".list-group-item").its("length").should("eq", 2);

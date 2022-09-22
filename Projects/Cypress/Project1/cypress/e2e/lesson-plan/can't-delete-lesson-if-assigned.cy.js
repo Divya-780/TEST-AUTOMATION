@@ -14,6 +14,7 @@ describe(" Deleting the lesson plan", function () {
 
     //Click on the delete icon to delete the lesson plan.
     cy.get("#p-tabpanel-0-label").click();
+    cy.wait(4000);
     cy.get(".fa-trash").eq(4).click();
     cy.get(".p-confirm-popup-accept").first().click({ force: true });
     cy.contains("Can't delete as lesson plan is already in use.").should(

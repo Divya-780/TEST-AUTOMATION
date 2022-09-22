@@ -13,6 +13,7 @@ describe("Mark speech as favorite", function () {
     cy.get(".fa-heart").first().click();
     //Redirecting to favorites page
     cy.get('[routerlink="/activity/favorites"]').click();
+    cy.wait(4000);
     //observe that marked video will be displayes in favorites page.
     cy.contains("Favorites").should("exist");
     //--TEAR DOWN --//
@@ -28,6 +29,7 @@ describe("Mark speech as favorite", function () {
     cy.get("form").submit();
     //Redirecting to favorites page
     cy.get('[routerlink="/activity/favorites"]').click();
+    cy.wait(6000)
     //verify that speech is removed from list of favorites
     cy.get(".fa-heart").first().click({ force: true });
     //observe that unmarked video will be removed
