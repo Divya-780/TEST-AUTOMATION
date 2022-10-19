@@ -17,14 +17,11 @@ describe("custom question for impromptu", function () {
     //add the custom question.
     cy.get("#p-accordiontab-0").click();
     cy.get(".btn").eq(2).click();
-    cy.get("#custom").type(
-      "What is the most difficult thing about English for you."
-    );
-    cy.get(".p-button-label").click();
+    cy.get("#custom").type("What is the most difficult thing about English for you." );
+    cy.get('.p-dialog-footer > .btn').click();
     //VALIDATION
     cy.contains(
-      "What is the most difficult thing about English for you?"
-    ).should("exist");
+      "What is the most difficult thing about English for you?" ).should("exist");
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });

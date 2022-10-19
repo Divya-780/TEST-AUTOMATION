@@ -12,7 +12,7 @@ describe("Coach shall be able to see  a feedback.", function () {
     cy.wait(2000);
 
     //SELECTING VIDEO FOR FEEDBACK
-    cy.get(".p-shadow-4").eq(4).click();
+    cy.get(".p-shadow-4").eq(1).click();
 
     //After click on video check it is redirecting to  assessment summary page
     cy.url().should("contain", "summary");

@@ -11,7 +11,7 @@ describe("Allowing the students into the zoom session", function () {
     //when you hover on zoom icon you can see the group schedule.
     cy.get(".nav-link").should("be.visible");
     //join zoom session
-    cy.get(".nav-link").eq(0).click();
+    cy.get(".nav-link").eq(5).click();
     cy.get("#video-icon").click();
     cy.wait(4000);
     cy.get(".zm-btn").click();

@@ -24,7 +24,7 @@ describe("Assigning the Impromptu speech topics", function () {
     cy.get("#custom").type(
       "What is the most difficult thing about English for you?"
     );
-    cy.get(".p-button-label").click();
+    cy.get('.p-dialog-footer > .btn').click()
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });

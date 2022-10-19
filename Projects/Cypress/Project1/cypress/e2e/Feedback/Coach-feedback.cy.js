@@ -9,7 +9,7 @@ describe("Coach shall be able to provide a feedback.", function () {
     cy.get("#password").type("Sonu@1234");
     cy.get("form").submit();
     cy.contains("Student Activity").click();
-    cy.get(".fa-comment-dots").eq(4).click();
+    cy.get(".fa-comment-dots").eq(1).click();
     // coach shall be able to navigate feedback page
     cy.url().should("contain", "feedback");
     cy.wait(4000);

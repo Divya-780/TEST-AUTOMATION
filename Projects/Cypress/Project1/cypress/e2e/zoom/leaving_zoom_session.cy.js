@@ -13,7 +13,7 @@ describe("leaving the zoom session", function () {
     cy.get(".nav-link").should("be.visible");
     cy.wait(4000);
     //join zoom session
-    cy.get(".nav-link").eq(0).click();
+    cy.get(".nav-link").eq(5).click();
     cy.wait(4000);
     cy.get(".zm-btn").click();
     cy.wait(4000);

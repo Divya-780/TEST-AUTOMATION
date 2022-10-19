@@ -15,6 +15,7 @@ describe("calendar in the group displays the recurrence of the zoom session ", f
     cy.get('[routerlink="/user/groups"]').click({ force: true });
     cy.wait(2000);
     //calender
+    cy.get('#p-tabpanel-1-label').click()
     cy.get(".fc").click();
     //-- VALIDATION-- //
     cy.url().should("contain", "groups");

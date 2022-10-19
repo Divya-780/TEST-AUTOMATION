@@ -12,7 +12,7 @@ describe("Camera is working during the zoom session (user permission)", function
     //when you hover on zoom icon you can see the group schedule.
     cy.get(".nav-link").should("be.visible");
     //join zoom session
-    cy.get(".nav-link").eq(0).click();
+    cy.get(".nav-link").eq(5).click();
     cy.wait(3000);
     cy.contains("Join");
     cy.wait(2000);

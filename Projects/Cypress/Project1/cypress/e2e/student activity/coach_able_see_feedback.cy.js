@@ -9,10 +9,8 @@ describe("Coach shall be able to see on which speech the feedback has been provi
     cy.get("form").submit();
     cy.contains("Student Activity").click();
     cy.wait(2000);
-
     //SELECTING VIDEO FOR FEEDBACK
-    cy.get(".p-shadow-4").eq(4).click();
-
+    cy.get(".p-shadow-4").eq(0).click();
     //After click on video check it is redirecting to  assessment summary page
     cy.url().should("contain", "summary");
 

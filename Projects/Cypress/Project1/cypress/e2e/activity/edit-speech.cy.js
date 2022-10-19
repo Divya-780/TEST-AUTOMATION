@@ -1,4 +1,4 @@
-describe("Edit name of a speech from activity page", function () {
+/*describe("Edit name of a speech from activity page", function () {
   it("Verify that user shall be able to edit name of a speech from activity page", function () {
     //navigate to Activity page.
     let url = Cypress.config().baseUrl;
@@ -24,4 +24,4 @@ describe("Edit name of a speech from activity page", function () {
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });
-});
+});*/

@@ -3,12 +3,12 @@ describe("Display of speeches in either grid or list view in activity page", fun
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click(); //sign in and navigate to  the Activity page.
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+105@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //Validation - After sign in, It should redirect to the activity page
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.url().should("contain", "/activity/history");
-
     //LIST VIEW
     cy.get('[for="btnradio1"]').click();
     //GRID VIEW

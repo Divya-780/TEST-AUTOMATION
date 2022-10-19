@@ -13,7 +13,9 @@ describe("Able to join zoom session (student)", function () {
     cy.get(".nav-link").should("be.visible");
     cy.wait(4000);
     //join zoom session
-    cy.get(".nav-link").eq(0).click();
+    cy.get('.nav-link').eq(4).click()
+   // cy.get(".nav-link").eq(5).click();
+    cy.wait(2000)
     cy.get(".zm-btn").click();
     //-- VALIDATION-- //
   });

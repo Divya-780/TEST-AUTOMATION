@@ -7,6 +7,7 @@ describe("User shall be able to redirect to favorites page", function() {
         cy.get("#email").type("sowbhagya3696+4@gmail.com");
         cy.get("#password").type("Sathwik@1719");
         cy.get("form").submit();
+        cy.get('a[href*="/activity/history"]').click({ force: true });
         //navigate to Favorites page
         cy.get('[routerlink="/activity/favorites"]').click();
         cy.wait(4000);
