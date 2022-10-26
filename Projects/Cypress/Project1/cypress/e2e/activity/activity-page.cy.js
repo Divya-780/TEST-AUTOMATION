@@ -8,8 +8,8 @@ describe("Display of newly recorded speech in activity page", function () {
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //Validation - After sign in, It should redirect to the activity page
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.url().should("contain", "/activity/history");
-
     //VALIDATION-verifying Newly recorded speeches in Activity page.
     cy.contains("Visual").should("exist");
     cy.contains("Voice").should("exist");

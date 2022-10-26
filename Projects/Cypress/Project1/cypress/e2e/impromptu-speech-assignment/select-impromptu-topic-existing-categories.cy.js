@@ -17,7 +17,7 @@ describe("selecting the impromptu topic from existing categories", function () {
     cy.get("#p-accordiontab-1").click();
     cy.get(".form-check-input").eq(2).click();
     cy.get(".form-check-input").eq(3).click();
-    cy.get(".p-button-label").click();
+    cy.get('.p-dialog-footer > .btn').click()
     //VALIDATION
     cy.contains("Why is it important to consume unbiased media?").should(
       "exist"

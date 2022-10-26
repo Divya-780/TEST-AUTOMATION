@@ -10,12 +10,14 @@ describe("Coach shall be able to provide a feedback.", function () {
     cy.get("form").submit();
     cy.contains("Student Activity").click();
     //Redirecting to student activity page
-    cy.url().should("contain", "studentactivity");
+    //cy.url().should("contain", "studentactivity");
     //feedback icon
-    cy.get(".fa-comment-dots").eq(4).click();
-    cy.wait(2000);
+    cy.get(".fa-comment-dots").eq(1).click();
+    cy.wait(4000);
+    cy.get('.upper-canvas').click()
     //FEEDBACK PAGE
-    cy.url().should("contain", "feedback");
+   // cy.url().should("contain", "feedback");
+    cy.wait(4000)
     cy.contains("Play/Pause").click();
     cy.wait(1000);
     cy.contains("Play/Pause").click();

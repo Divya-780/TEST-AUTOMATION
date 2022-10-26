@@ -13,7 +13,9 @@ describe("Adding new students to the group.", function () {
     //Click "Add new student
     cy.get(".text-capitalize").eq(2).click();
     // cy.get(".px-5").click();
-    cy.contains("Add New Student").click();
+    cy.contains("Add Student").click();
+    cy.get('#p-tabpanel-6-label').click()
+    cy.wait(4000)
     cy.get("#firstName").type("sowbhagya");
     cy.get("#lastName").type("UI");
     cy.wait(1000);
@@ -36,8 +38,9 @@ describe("Adding new students to the group.", function () {
       .concat(hhmmss)
       .concat("@applines.com");
     cy.get("#email").type(email);
-    cy.get(".p-inputnumber-input").type("22");
+   // cy.get(".p-inputnumber-input").type("22");
     cy.get('[Value="Male"]').check({ force: true });
+    cy.get('#p-tabpanel-5 > .btn').click()
     //click Add
     cy.get(".p-dialog-footer .btn-secondary").click();
     // //VALIDATION
@@ -46,3 +49,4 @@ describe("Adding new students to the group.", function () {
     cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });
+//cy.get('#p-tabpanel-6 > .row.ng-star-inserted > :nth-child(1) > .p-3 > .row > :nth-child(1) > #firstName')

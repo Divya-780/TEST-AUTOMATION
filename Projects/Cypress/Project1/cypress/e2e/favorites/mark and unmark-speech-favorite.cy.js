@@ -9,10 +9,12 @@ describe("Mark speech as favorite", function () {
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     cy.contains("Activity");
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     //click on favorite icon
     cy.get(".fa-heart").first().click();
     //Redirecting to favorites page
     cy.get('[routerlink="/activity/favorites"]').click();
+    cy.wait(4000);
     //observe that marked video will be displayes in favorites page.
     cy.contains("Favorites").should("exist");
     //--TEAR DOWN --//
@@ -26,8 +28,10 @@ describe("Mark speech as favorite", function () {
     cy.get("#email").type("sowbhagya3696+4@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     //Redirecting to favorites page
     cy.get('[routerlink="/activity/favorites"]').click();
+    cy.wait(6000)
     //verify that speech is removed from list of favorites
     cy.get(".fa-heart").first().click({ force: true });
     //observe that unmarked video will be removed

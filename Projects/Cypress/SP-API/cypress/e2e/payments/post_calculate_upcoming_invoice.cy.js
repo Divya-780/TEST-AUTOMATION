@@ -6,9 +6,9 @@ describe('POST calculate upcoming invoice API', function () {
             headers: {
               Authorization: 'Token 4872aae72371e9a72f50a13aac2f4d92362ca57c',
             },
-            body:{  
-                    "priceId": "price_1J3MAyCTvjB6dEtG0LkQ5vVX"
-                },
+            body:{
+                "priceId": "price_1J3MAQCTvjB6dEtGAySFM3N7"
+            },
 
         }).then(
                 (response) => {

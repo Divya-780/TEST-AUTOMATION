@@ -16,7 +16,7 @@ describe("Analytics page access", function () {
       .select("Last 5 Speeches")
       .should("have.value", "last5");
     cy.contains("Last 5 Speeches Performance").click();
-    cy.contains("Areas Of Improvemen").click();
+    cy.contains("Areas Of Improvement").click();
     cy.get(".chartjs-render-monitor").first().click();
     //-- VALIDATION-- //
     cy.url().should("contain", "analytics");

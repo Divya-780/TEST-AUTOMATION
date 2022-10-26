@@ -12,7 +12,7 @@ describe('POST cancel subscription API', function () {
                     console.log(response);
                     
                     expect(response.status).to.eq(200)
-                    expect(response.status).to.eq(true)
+                    expect(response.body).to.eq(true)
                 }
             )
         })

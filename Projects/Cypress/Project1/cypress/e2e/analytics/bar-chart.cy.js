@@ -18,6 +18,6 @@ describe("Bar Chart", function () {
     //-- VALIDATION-- //
     cy.get("app-weekly-performance").click();
     //--TEAR DOWN --//
-    cy.get(".fa-sign-out-alt").click({ force: true });
+    //cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });

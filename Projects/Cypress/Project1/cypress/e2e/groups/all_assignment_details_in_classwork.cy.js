@@ -12,7 +12,8 @@ describe("Coach shall be able to see all assignment details under All assignment
     cy.get('a[href*="/user/groups"]').click({ force: true });
     cy.wait(2000);
     cy.get(".text-capitalize").eq(2).click();
-    cy.get("#p-tabpanel-1-label").click();
+    cy.wait(4000)
+    cy.get('#p-tabpanel-3-label').click()
     cy.contains("student").should("exist");
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });

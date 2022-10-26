@@ -9,8 +9,8 @@ describe("Performance scores and summary shall be displayed for each speech in a
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //Validation - After sign in, It should redirect to the activity page
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.url().should("contain", "/activity/history");
-
     //verify that scores in acitvity page
     cy.contains("Visual");
     cy.contains("Voice");

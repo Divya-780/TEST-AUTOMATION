@@ -7,9 +7,11 @@ describe('Try Now -Impromptu speech', function () {
         cy.contains('Try Now').click();
         //user shall be presented with the 7 categories to pick a topic and question related to that.
         cy.get('body').click()
-        cy.get('#overlay').eq(0).click()
+        cy.get('.dcard').eq(0).click()
         //user is aligned the recording will start.
-        cy.get('.p-button-label').click()
+        cy.get('.mr-2').click()
+        cy.get('.fa').click()
+        //cy.get('.p-button-label').click()
         //-- VALIDATION-- //
         cy.url().should("contain", 'trynow'); 
             

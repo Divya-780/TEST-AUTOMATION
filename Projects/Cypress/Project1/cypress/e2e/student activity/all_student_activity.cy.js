@@ -8,6 +8,7 @@ describe("Coach shall be able to see all student activities under Student Activi
     cy.get("#email").type("sowbhagya3696+4@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.contains("Student Activity").click();
     cy.url().should("contain", "studentactivity");
     //--TEAR DOWN --//

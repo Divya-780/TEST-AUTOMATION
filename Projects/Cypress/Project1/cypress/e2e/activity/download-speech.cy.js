@@ -8,6 +8,7 @@ describe("Download a speech from activity page", function () {
     cy.get("#password").type("Sathwik@151719");
     cy.get("form").submit();
     //Validation - After sign in, It should redirect to the activity page
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.url().should("contain", "/activity/history");
     cy.wait(2000);
     // By clicking on more option, we should select download button

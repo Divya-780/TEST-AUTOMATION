@@ -9,6 +9,7 @@ describe("Donut chart-Areas of Improvement", function () {
     cy.get("#password").type("Sonu@1234");
     cy.get("form").submit();
     //Analytics page
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.get('[routerlink="/activity/analytics"]').click();
     //Action
     cy.get(".form-select-sm")

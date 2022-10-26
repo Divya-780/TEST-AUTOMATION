@@ -9,6 +9,7 @@ describe('Adding a coach', function () {
         cy.get('#password').type('boulder');
         cy.get('form').submit()
         cy.wait(4000)
+        cy.get(':nth-child(2) > a > .menu-title')
         cy.get('.menu-title').eq(1).click()
         cy.get('.btn-group').click()
         cy.wait(2000)

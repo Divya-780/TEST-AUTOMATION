@@ -11,8 +11,8 @@ describe("Parent shall be able to change the profile information ", function () 
     cy.wait(2000);
     cy.get(".nav-link").eq(4).click();
     // User shall be able to view and edit the profile information here.
-    cy.get("#fname").clear().type("sowbhagya");
-    cy.get("#lname").clear().type("lakshmi");
+    //cy.get("#fname").clear().type("sowbhagya");
+   // cy.get("#lname").clear().type("lakshmi");
     cy.get("#phone").clear().type("9848328832");
     //Click Save Profile button
     cy.get(".btn").first().click();

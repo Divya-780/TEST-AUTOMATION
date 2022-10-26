@@ -8,9 +8,6 @@ describe("Display of Custom Template", function () {
     cy.get("#email").type("sowbhagya3696+4@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
-    //Validation - After sign in, It should redirect to the activity page
-    cy.url().should("contain", "/activity/history");
-
     //Access the Assessment criteria
     cy.get('a[href*="/user/assessment-template"]').click({ force: true });
     cy.wait(4000);

@@ -8,6 +8,7 @@ describe("Coach shall be able to see the summary of the videos by clicking the s
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     cy.wait(4000);
+    cy.contains("Student Activity").click();
     cy.get(".pt-3 > .btn").first().click();
     cy.wait(4000);
     cy.get("#p-tabpanel-0-label").click();

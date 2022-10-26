@@ -9,6 +9,7 @@ describe("Trend line chart", function () {
     cy.get("#password").type("Sonu@1234");
     cy.get("form").submit();
     //Analytics page
+    cy.get('a[href*="/activity/history"]').click({ force: true });
     cy.get('[routerlink="/activity/analytics"]').click();
     cy.get(".form-select-sm")
       .eq(0)
