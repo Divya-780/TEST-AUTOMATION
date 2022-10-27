@@ -19,7 +19,7 @@ describe("Performance scores and summary shall be displayed for each speech in a
     cy.wait(2000);
     //-- VALIDATION - Verify that user  assessment summary
     cy.url().should("contain", "/summary");
-    //--TEAR DOWN --//
+    //--TEAR DOWN(LOGOUT) --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });
