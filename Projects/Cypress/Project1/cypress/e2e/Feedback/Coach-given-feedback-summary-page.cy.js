@@ -16,10 +16,10 @@ describe("Coach shall be able to see  a feedback.", function () {
 
     //After click on video check it is redirecting to  assessment summary page
     cy.url().should("contain", "summary");
-
+    cy.wait(5000)
     //Clicking feedback tab
     cy.get("#p-tabpanel-1-label").click();
-
+    cy.wait(20000);
     //PLAY-PAUSE VIDEO
     cy.contains("Play/Pause").click();
     cy.wait(5000);

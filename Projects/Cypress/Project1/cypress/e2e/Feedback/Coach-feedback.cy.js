@@ -12,7 +12,7 @@ describe("Coach shall be able to provide a feedback.", function () {
     cy.get(".fa-comment-dots").eq(1).click();
     // coach shall be able to navigate feedback page
     cy.url().should("contain", "feedback");
-    cy.wait(4000);
+    cy.wait(20000);
     //PLAY-PAUSE
     cy.contains("Play/Pause").click();
     cy.wait(3000);

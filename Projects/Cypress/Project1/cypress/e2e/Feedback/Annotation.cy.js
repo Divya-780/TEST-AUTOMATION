@@ -17,7 +17,7 @@ describe("Coach shall be able to provide a feedback.", function () {
     cy.get('.upper-canvas').click()
     //FEEDBACK PAGE
    // cy.url().should("contain", "feedback");
-    cy.wait(4000)
+    cy.wait(20000)
     cy.contains("Play/Pause").click();
     cy.wait(1000);
     cy.contains("Play/Pause").click();

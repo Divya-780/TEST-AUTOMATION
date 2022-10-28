@@ -13,6 +13,7 @@ describe("Student shall be able to see  a feedback given by coach", function () 
     cy.get(".history--favourites").eq(0).click();
     cy.url().should("contain", "summary");
     cy.get("#p-tabpanel-1-label").click();
+    cy.wait(20000)
     cy.get(".btn-secondary").click();
     cy.wait(5000);
     cy.get(".btn-secondary").click();
