@@ -4,7 +4,7 @@ describe("Adding new students to the group.", function () {
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //visit group
@@ -16,8 +16,8 @@ describe("Adding new students to the group.", function () {
     cy.contains("Add Student").click();
     cy.get('#p-tabpanel-6-label').click()
     cy.wait(4000)
-    cy.get("#firstName").type("sowbhagya");
-    cy.get("#lastName").type("UI");
+    cy.get("#firstName",{timeout:6000}).type("sowbhagya",{force: true});
+    cy.get("#lastName",{timeout:60000}).type("UI",{force: true});
     cy.wait(1000);
     //Provide first name, last name and email id of the newly added student.
     var date = new Date();
@@ -37,7 +37,7 @@ describe("Adding new students to the group.", function () {
       .concat(yyyymmdd)
       .concat(hhmmss)
       .concat("@applines.com");
-    cy.get("#email").type(email);
+    cy.get("#email").type(email,{force: true});
    // cy.get(".p-inputnumber-input").type("22");
     cy.get('[Value="Male"]').check({ force: true });
     cy.get('#p-tabpanel-5 > .btn').click()
@@ -49,4 +49,3 @@ describe("Adding new students to the group.", function () {
     cy.get(".fa-sign-out-alt").click({ force: true });
   });
 });
-//cy.get('#p-tabpanel-6 > .row.ng-star-inserted > :nth-child(1) > .p-3 > .row > :nth-child(1) > #firstName')

@@ -5,12 +5,13 @@ describe("Delete the impromptu topic", function () {
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     cy.wait(4000);
     // visit lesson plan.
     cy.get('a[href*="user/lessonplan"]').click({ force: true });
+    cy.wait(2000)
     //Impromptu section
     cy.get("#p-tabpanel-1-label").click();
     cy.wait(4000);

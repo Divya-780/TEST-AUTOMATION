@@ -5,7 +5,7 @@ describe("Assigning the Impromptu speech topics", function () {
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     cy.wait(4000);
@@ -21,9 +21,7 @@ describe("Assigning the Impromptu speech topics", function () {
     //add the custom question.
     cy.get("#p-accordiontab-0").click();
     cy.get(".btn").eq(2).click();
-    cy.get("#custom").type(
-      "What is the most difficult thing about English for you?"
-    );
+    cy.get("#custom").type("What is the most difficult thing about English for you?");
     cy.get('.p-dialog-footer > .btn').click()
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });

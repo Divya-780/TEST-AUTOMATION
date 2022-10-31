@@ -28,9 +28,10 @@ describe("Coach shall be able to delete a group if the group is empty.", functio
     cy.get("#endDate").click();
     cy.get(".p-datepicker-today").last().click();
     cy.get(".btn").last().click();
+    cy.wait(2000)
     //Delete group
     cy.get("#dropdownOne").click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(".fa-trash-alt").click();
     cy.get(".p-dialog-footer > .btn-secondary").click();
     cy.contains("Delete Group").should("not.exist");

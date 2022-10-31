@@ -4,7 +4,7 @@ describe("While copying the default template, the weights should be equal to 100
     cy.visit(url);
 
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     // Go to the Assessment Criteria templates page

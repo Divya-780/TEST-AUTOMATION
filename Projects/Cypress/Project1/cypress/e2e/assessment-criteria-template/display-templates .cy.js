@@ -5,7 +5,7 @@ describe("Display of Default template in Assessment Criteria page", function () 
     let url = Cypress.config().baseUrl; //accesing baseUrl
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //visit assessment criteria template

@@ -5,14 +5,15 @@ describe("Coach should allow  student view if the student is  active or subscrib
       let url = Cypress.config().baseUrl;
       cy.visit(url);
       cy.contains("Sign in").click();
-      cy.get("#email").type("sowbhagya3696+4@gmail.com");
+      cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
       cy.get("#password").type("Sathwik@1719");
       cy.get("form").submit();
       //visit group url
       cy.get('a[href*="/user/groups"]').click({ force: true });
       cy.wait(2000);
       cy.get(".text-capitalize").eq(1).click();
-      cy.get('.studentView--name').eq(1).click()
+      cy.wait(2000)
+      cy.get('.studentView--name').eq(0).click()
        //VALIDATION
        cy.url().should('contain','activity/history');
       //--TEAR DOWN --//activity/history

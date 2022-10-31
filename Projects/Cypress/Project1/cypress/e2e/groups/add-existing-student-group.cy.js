@@ -5,7 +5,7 @@ describe("Add an existing student to the group", function () {
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     //visit group url

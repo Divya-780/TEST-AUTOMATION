@@ -5,8 +5,8 @@ describe("Add group details", function () {
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
-    cy.get("#password").type("Sathwik@1719");
+    cy.get("#email").type("tejasri+coach@applines.com");
+    cy.get("#password").type("Speechpundit@123");
     cy.get("form").submit();
     cy.wait(4000);
     //visit group

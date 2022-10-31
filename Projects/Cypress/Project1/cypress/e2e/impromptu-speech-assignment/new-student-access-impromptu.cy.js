@@ -10,7 +10,7 @@ describe("new students access to Impromptu questions", function () {
     cy.get("form").submit();
     cy.contains("Assignments").trigger("mouseover");
     cy.contains("Impromptu").click({ force: true });
-    cy.contains("Topic 1").click({ force: true });
+   // cy.contains("Topic 1").click({ force: true });
    // cy.get('.col-md-4').eq(0).click()
     //VALIDATION
     cy.url().should("contain", "impromptuspeech");

@@ -21,6 +21,7 @@ describe("Assigning the lesson plan. ", function () {
     cy.get(".p-datepicker-today ").click();
     cy.wait(2000);
     cy.get("#dueDate").click();
+    cy.wait(4000)
     cy.get(".p-datepicker-today ").click();
     // select the level and assessment criteria template.
     cy.get(".form-select").eq(1).select("Beginner");

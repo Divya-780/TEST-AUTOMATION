@@ -5,7 +5,7 @@ describe("custom question for impromptu", function () {
     let url = Cypress.config().baseUrl;
     cy.visit(url);
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
     cy.wait(1000);
@@ -18,10 +18,11 @@ describe("custom question for impromptu", function () {
     cy.get("#p-accordiontab-0").click();
     cy.get(".btn").eq(2).click();
     cy.get("#custom").type("What is the most difficult thing about English for you." );
+    cy.wait(1000)
     cy.get('.p-dialog-footer > .btn').click();
     //VALIDATION
-    cy.contains(
-      "What is the most difficult thing about English for you?" ).should("exist");
+    cy.wait(2000)
+    cy.contains("What is the most difficult thing about English for you." ).should("exist");
     //--TEAR DOWN --//
     cy.get(".fa-sign-out-alt").click({ force: true });
   });

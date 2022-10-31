@@ -43,7 +43,8 @@ describe("Coach shall be able to Archive the group.", function () {
     cy.get(".fa-file-archive").should("not.exist");
 
     //Delete Archived Group
-    cy.get(".fa-trash-alt").click();
+    cy.get('.dropdown').eq(3).click()
+    //cy.get(".fa-trash-alt").click();
     cy.get(".p-dialog-footer > .btn-secondary").click();
     cy.contains("Archive Group").should("not.exist");
     //--TEAR DOWN --//

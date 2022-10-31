@@ -4,7 +4,7 @@ describe("while copying the default template, if the user forgot to click the ch
     cy.visit(url);
 
     cy.contains("Sign in").click();
-    cy.get("#email").type("sowbhagya3696+4@gmail.com");
+    cy.get("#email").type("sowbhagya3696+goal_coach@gmail.com");
     cy.get("#password").type("Sathwik@1719");
     cy.get("form").submit();
 

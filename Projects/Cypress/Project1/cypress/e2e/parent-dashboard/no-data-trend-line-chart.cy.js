@@ -15,7 +15,6 @@ describe("Trend line chart", function () {
         .select("Last 5 Speeches")
         .should("have.value", "last5");
       //The trend line  chart of all the speeches and metrics
-      cy.contains('Trend line chart')
       cy.get(".chartjs-render-monitor").eq(0).click({ force: true });
       cy.contains(' No data to display ');
       //-- VALIDATION-- //

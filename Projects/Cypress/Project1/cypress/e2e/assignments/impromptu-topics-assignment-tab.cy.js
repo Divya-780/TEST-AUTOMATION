@@ -10,7 +10,7 @@ describe("User shall be able to access the impromptu speech topics under Assignm
     cy.get("form").submit();
     cy.contains("Assignments").trigger("mouseover");
     cy.contains("Impromptu").trigger("mouseenter", { force: true });
-    cy.contains("Topic 19").click({ force: true });
+    cy.contains("Topic 1").click({ force: true });
     cy.get(".p-button-label").click();
     //VALIDATION
     cy.url("https://dev02.speechpundit.com/record");
